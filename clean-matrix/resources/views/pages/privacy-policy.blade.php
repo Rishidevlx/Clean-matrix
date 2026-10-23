@@ -6,36 +6,26 @@
 @section('content')
 
 <!-- ======================================================== -->
-<!-- SECTION 1: GLOBAL HEADER BANNER                          -->
-<!-- ======================================================== -->
-<x-page-banner 
-    title="Privacy Policy" 
-    breadcrumb="Privacy Policy" 
-    :bgImage="asset('images/contact-banner.jpg')" 
-/>
-
-<!-- ======================================================== -->
 <!-- SECTION 2: PRIVACY POLICY CONTENT & STICKY NAVIGATION    -->
 <!-- ======================================================== -->
-<section class="py-12 sm:py-16 lg:py-20 bg-[#f8fafc] font-body relative">
+<section class="py-12 sm:py-16 lg:py-20 bg-white font-body relative border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Top Overview Banner Card -->
         <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 mb-10 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="space-y-1.5">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary-sub text-xs font-semibold uppercase tracking-wider font-heading">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                    <span>Transparency &amp; Trust</span>
-                </div>
-                <h1 class="font-heading text-2xl sm:text-3xl font-bold text-secondary tracking-tight">
+                <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                    TRANSPARENCY &amp; TRUST
+                </p>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight">
                     Clean Matrix Privacy Policy
-                </h1>
-                <p class="text-xs sm:text-sm text-neutral-text font-light">
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-500 font-normal">
                     Effective Date: October 2026 &bull; Last Updated: October 24, 2026
                 </p>
             </div>
             <div class="flex items-center gap-3">
-                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-heading font-semibold transition-colors shadow-2xs">
+                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#81BA41] hover:bg-[#72aa38] text-white text-xs sm:text-sm font-heading font-semibold transition-colors shadow-sm">
                     <i data-lucide="help-circle" class="w-4 h-4"></i>
                     <span>Legal Support</span>
                 </a>

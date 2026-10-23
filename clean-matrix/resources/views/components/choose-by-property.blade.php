@@ -1,489 +1,166 @@
-<!-- Custom Styles for Clenix Services Tab with Slider & 3D Glass Bubble -->
-<style>
-    /* Tab Box Active & Hover Styling (Equal size, Boxie rounded-[4px] as per Clenix) */
-    .clenix-prop-tab {
-        border-radius: 4px !important;
-    }
-    .clenix-prop-tab.active {
-        background-color: #287ff9 !important;
-        border-color: #287ff9 !important;
-    }
-    .clenix-prop-tab.active .tab-icon-wrap,
-    .clenix-prop-tab.active .tab-title-text {
-        color: #ffffff !important;
-    }
-    .clenix-prop-tab:hover {
-        background-color: #287ff9;
-        border-color: #287ff9;
-    }
-    .clenix-prop-tab:hover .tab-icon-wrap,
-    .clenix-prop-tab:hover .tab-title-text {
-        color: #ffffff;
-    }
-
-    /* Clenix Signature Curved Image Mask (Exact circle clip-path from theme on desktop) */
-    @media (min-width: 1024px) {
-        .clenix-banner-img-wrap {
-            overflow: hidden;
-            -webkit-clip-path: circle(65% at 65% 50%);
-            clip-path: circle(65% at 65% 50%);
-            height: 100%;
-        }
-    }
-    @media (max-width: 1023px) {
-        .clenix-banner-img-wrap {
-            -webkit-clip-path: none;
-            clip-path: none;
-            height: 100%;
-        }
-        .clenix-photo-col {
-            line-height: 0 !important;
-        }
-        .clenix-photo-col img {
-            vertical-align: bottom !important;
-            display: block !important;
-        }
-    }
-
-    /* 3D Realistic Glossy Bubble */
-    .clenix-3d-bubble {
-        width: 110px;
-        height: 110px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.5) 0%, rgba(40, 127, 249, 0.85) 42%, #14287b 95%);
-        box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 3px 3px 8px rgba(255, 255, 255, 0.7), 0 8px 20px rgba(0, 0, 0, 0.28);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        flex-shrink: 0;
-        position: relative;
-    }
-    @media (min-width: 640px) {
-        .clenix-3d-bubble {
-            width: 125px;
-            height: 125px;
-        }
-    }
-    .clenix-3d-bubble::after {
-        content: '';
-        position: absolute;
-        top: 12px;
-        left: 20px;
-        width: 26px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
-        transform: rotate(-30deg);
-        filter: blur(1px);
-    }
-</style>
-
 <!-- ======================================================== -->
-<!-- CHOOSE BY PROPERTY SECTION (Clenix Tabs + Sliding Track) -->
+<!-- COMPONENT: CHOOSE BY PROPERTY TYPE                        -->
+<!-- Alternating Zigzag Layout (Pure White Background, No Card)-->
+<!-- Clean, Minimal & Consistent with Pronto/Clean Matrix Brand-->
 <!-- ======================================================== -->
-<section id="property-types" class="relative py-16 sm:py-24 lg:py-28 bg-[#F9FBFC] overflow-hidden border-t border-neutral-border/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+@php
+    $properties = [
+        [
+            'id' => 'residential',
+            'title' => 'Residential Cleaning',
+            'desc' => 'Routine upkeep, deep floor scrubbing, and intensive kitchen & bathroom sanitisation for villas, apartments, and modern homes across Coimbatore. Delivered with 100% eco-friendly, family & pet-safe formulations.',
+            'bullets' => [
+                'Deep tile & grout mechanized scrubbing with German machinery',
+                'Odorless kitchen chimney & countertop degreasing',
+                'Bathroom limescale removal & sanitary sanitization',
+                'Upholstery shampooing & balcony pressure jet washing'
+            ],
+            'image' => asset('images/properties/residential.jpg'),
+        ],
+        [
+            'id' => 'schools',
+            'title' => 'Schools & Daycares',
+            'desc' => 'Specialized child-safe sanitisation for kindergartens, primary schools, and daycare centers. Non-toxic, herbal chemicals with flexible after-school and weekend schedules ensuring zero academic disruption.',
+            'bullets' => [
+                'Non-toxic, food-grade antibacterial sanitization',
+                'Play equipment, desk & toy disinfection',
+                'Restroom hygiene maintenance & odor neutralization',
+                'Scheduled weekend & term-holiday deep sanitization'
+            ],
+            'image' => asset('images/properties/school.jpg'),
+        ],
+        [
+            'id' => 'colleges',
+            'title' => 'Colleges & Campuses',
+            'desc' => 'High-capacity mechanized cleaning solutions for university auditoriums, science labs, canteens, and multi-storey hostel facilities with certified bio-safety standards and trained manpower.',
+            'bullets' => [
+                'Auditorium acoustic chair shampooing & floor buffing',
+                'High-reach exterior glass & facade washing',
+                'Hostel block mechanized washroom restoration',
+                'Central dining & food court steam degreasing'
+            ],
+            'image' => asset('images/properties/college.jpg'),
+        ],
+        [
+            'id' => 'commercial',
+            'title' => 'Commercial & IT Offices',
+            'desc' => 'High-uptime corporate hygiene protocols. Server room anti-static vacuuming, open-plan workstation sanitisation, and boardroom carpet deep shampooing with flexible night-shift deployments.',
+            'bullets' => [
+                'Anti-static HEPA vacuuming for electronics & servers',
+                'Boardroom fabric & leather chair care',
+                'Pantry steam degreasing & water cooler sanitization',
+                'Overnight & weekend service to prevent workflow downtime'
+            ],
+            'image' => asset('images/properties/commercial.jpg'),
+        ],
+        [
+            'id' => 'handover',
+            'title' => 'Move-In / Post-Construction',
+            'desc' => 'Turnkey deep-clean handover for newly constructed homes, commercial tenant changes, and renovated properties. Eradicates paint splatters, fine cement dust, adhesive residues, and grout film.',
+            'bullets' => [
+                'Complete removal of plaster, cement dust & paint marks',
+                'Window glass frame, track & sliding rail restoration',
+                'Cupboard, drawer & wardrobe interior vacuuming',
+                'Ready-to-occupy sanitized handover with supervisor sign-off'
+            ],
+            'image' => asset('images/properties/handover.jpg'),
+        ],
+    ];
+@endphp
 
-        <!-- Section Heading -->
-        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
-            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-secondary">
+<section id="property-types" class="relative py-16 sm:py-24 bg-white font-body border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header (Clean Small Heading like OUR TESTIMONIALS / FAQ'S) -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-2">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                PROPERTY SPECIALIZATIONS
+            </p>
+            
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A] leading-tight">
                 Choose By Property Type
             </h2>
 
-            <p class="font-body text-sm sm:text-base text-neutral-text font-light leading-relaxed">
-                Explore specialized cleaning and hygiene protocols specifically calibrated to your property type and footfall.
+            <p class="font-body text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto pt-1">
+                Explore specialized cleaning protocols specifically calibrated to your property type, footfall, and hygiene standards across Coimbatore.
             </p>
         </div>
 
-        <!-- ======================================================== -->
-        <!-- TOP TABS SLIDER BAR (100% Equal Size Cards + Outer Arrows)-->
-        <!-- ======================================================== -->
-        <div class="relative max-w-6xl mx-auto mb-8 sm:mb-10 px-12 sm:px-14">
-            
-            <!-- Left Slider Arrow (Outside the cards, never touching) -->
-            <button id="clenixTabPrev" 
-                    type="button"
-                    aria-label="Previous tab"
-                    class="flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-md border border-neutral-border items-center justify-center text-secondary-sub hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 cursor-pointer">
-                <i data-lucide="chevron-left" class="w-5 h-5"></i>
-            </button>
+        <!-- Vertical Alternating Zigzag Items List (Pure Content Flow, No Card Box) -->
+        <div class="space-y-14 sm:space-y-20 lg:space-y-24">
+            @foreach($properties as $index => $prop)
+                @php
+                    $isReversed = $index % 2 !== 0; // Alternates left/right on desktop
+                @endphp
 
-            <!-- Right Slider Arrow (Outside the cards, never touching) -->
-            <button id="clenixTabNext" 
-                    type="button"
-                    aria-label="Next tab"
-                    class="flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-md border border-neutral-border items-center justify-center text-secondary-sub hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 cursor-pointer">
-                <i data-lucide="chevron-right" class="w-5 h-5"></i>
-            </button>
+                <div class="pt-10 sm:pt-14 border-t border-slate-100 first:border-t-0 first:pt-0 group">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center {{ $isReversed ? 'lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1' : '' }}">
 
-            <!-- Tabs Track Wrapper -->
-            <div id="clenixTabsTrack" class="overflow-hidden w-full">
-                <!-- Inner Track: On mobile slides 1-by-1; on sm+ displays 5 perfectly equal cards -->
-                <div id="clenixTabsInner" class="flex items-center gap-2 sm:gap-3 transition-transform duration-500 ease-out py-1">
-                    
-                    <!-- Tab 0: Residential Homes -->
-                    <button type="button" 
-                            onclick="switchClenixTab(0)"
-                            class="clenix-prop-tab active w-full flex-shrink-0 sm:flex-shrink sm:flex-1 sm:w-1/5 sm:min-w-0 bg-white p-3 sm:p-4 text-center border border-neutral-border/70 shadow-sm transition-all duration-300 group cursor-pointer h-24 sm:h-28 flex flex-col items-center justify-center"
-                            data-index="0">
-                        <div class="tab-icon-wrap h-8 sm:h-9 flex items-center justify-center text-[#287ff9] transition-colors mb-1.5">
-                            <i data-lucide="home" class="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.8]"></i>
-                        </div>
-                        <div class="tab-title-text font-heading text-xs sm:text-[13px] lg:text-[14px] font-medium text-secondary-sub transition-colors text-center leading-tight h-8 flex items-center justify-center">
-                            Residential Homes
-                        </div>
-                    </button>
+                        <!-- ================= CONTENT COLUMN ================= -->
+                        <div class="lg:col-span-7 space-y-4 sm:space-y-5">
 
-                    <!-- Tab 1: Schools & Daycares -->
-                    <button type="button" 
-                            onclick="switchClenixTab(1)"
-                            class="clenix-prop-tab w-full flex-shrink-0 sm:flex-shrink sm:flex-1 sm:w-1/5 sm:min-w-0 bg-white p-3 sm:p-4 text-center border border-neutral-border/70 shadow-sm transition-all duration-300 group cursor-pointer h-24 sm:h-28 flex flex-col items-center justify-center"
-                            data-index="1">
-                        <div class="tab-icon-wrap h-8 sm:h-9 flex items-center justify-center text-[#287ff9] transition-colors mb-1.5">
-                            <i data-lucide="book-open" class="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.8]"></i>
-                        </div>
-                        <div class="tab-title-text font-heading text-xs sm:text-[13px] lg:text-[14px] font-medium text-secondary-sub transition-colors text-center leading-tight h-8 flex items-center justify-center">
-                            Schools & Daycares
-                        </div>
-                    </button>
-
-                    <!-- Tab 2: Colleges & Campuses -->
-                    <button type="button" 
-                            onclick="switchClenixTab(2)"
-                            class="clenix-prop-tab w-full flex-shrink-0 sm:flex-shrink sm:flex-1 sm:w-1/5 sm:min-w-0 bg-white p-3 sm:p-4 text-center border border-neutral-border/70 shadow-sm transition-all duration-300 group cursor-pointer h-24 sm:h-28 flex flex-col items-center justify-center"
-                            data-index="2">
-                        <div class="tab-icon-wrap h-8 sm:h-9 flex items-center justify-center text-[#287ff9] transition-colors mb-1.5">
-                            <i data-lucide="graduation-cap" class="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.8]"></i>
-                        </div>
-                        <div class="tab-title-text font-heading text-xs sm:text-[13px] lg:text-[14px] font-medium text-secondary-sub transition-colors text-center leading-tight h-8 flex items-center justify-center">
-                            Colleges & Campuses
-                        </div>
-                    </button>
-
-                    <!-- Tab 3: Commercial & IT -->
-                    <button type="button" 
-                            onclick="switchClenixTab(3)"
-                            class="clenix-prop-tab w-full flex-shrink-0 sm:flex-shrink sm:flex-1 sm:w-1/5 sm:min-w-0 bg-white p-3 sm:p-4 text-center border border-neutral-border/70 shadow-sm transition-all duration-300 group cursor-pointer h-24 sm:h-28 flex flex-col items-center justify-center"
-                            data-index="3">
-                        <div class="tab-icon-wrap h-8 sm:h-9 flex items-center justify-center text-[#287ff9] transition-colors mb-1.5">
-                            <i data-lucide="building-2" class="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.8]"></i>
-                        </div>
-                        <div class="tab-title-text font-heading text-xs sm:text-[13px] lg:text-[14px] font-medium text-secondary-sub transition-colors text-center leading-tight h-8 flex items-center justify-center">
-                            Commercial & IT
-                        </div>
-                    </button>
-
-                    <!-- Tab 4: Move-In / Handover -->
-                    <button type="button" 
-                            onclick="switchClenixTab(4)"
-                            class="clenix-prop-tab w-full flex-shrink-0 sm:flex-shrink sm:flex-1 sm:w-1/5 sm:min-w-0 bg-white p-3 sm:p-4 text-center border border-neutral-border/70 shadow-sm transition-all duration-300 group cursor-pointer h-24 sm:h-28 flex flex-col items-center justify-center"
-                            data-index="4">
-                        <div class="tab-icon-wrap h-8 sm:h-9 flex items-center justify-center text-[#287ff9] transition-colors mb-1.5">
-                            <i data-lucide="key-round" class="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.8]"></i>
-                        </div>
-                        <div class="tab-title-text font-heading text-xs sm:text-[13px] lg:text-[14px] font-medium text-secondary-sub transition-colors text-center leading-tight h-8 flex items-center justify-center">
-                            Move-In / Handover
-                        </div>
-                    </button>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- BANNER SLIDING TRACK (Smooth Horizontal Right-to-Left)   -->
-        <!-- ======================================================== -->
-        <div class="max-w-6xl mx-auto rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl bg-[#14287b] relative">
-            
-            <!-- Continuous Slider Track (500% width = 5 x 100% slides) -->
-            <div id="clenixSliderTrack" class="flex w-[500%] transition-transform duration-500 ease-out">
-
-                <!-- ================= SLIDE 0: RESIDENTIAL ================= -->
-                <div class="w-[20%] flex-shrink-0">
-                    <div class="flex flex-col lg:flex-row items-stretch h-full">
-                        <!-- Left Content Area -->
-                        <div class="w-full lg:w-[54%] p-6 sm:p-10 lg:p-14 z-10 flex flex-col justify-center relative">
-                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-[40px] font-normal text-white leading-tight mb-3 sm:mb-4">
-                                Residential Cleaning
+                            <!-- Title (Starts directly without tag/price badges) -->
+                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight group-hover:text-[#00448B] transition-colors leading-tight">
+                                {{ $prop['title'] }}
                             </h3>
 
-                            <p class="font-body text-xs sm:text-sm lg:text-base text-white/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-lg">
-                                Routine upkeep, deep floor scrubbing, and intensive kitchen & bathroom sanitisation for villas, apartments, and modern homes. Delivered with 100% eco-friendly, family & pet-safe formulations.
+                            <!-- Description -->
+                            <p class="font-body text-sm sm:text-base text-slate-600 font-light leading-relaxed">
+                                {{ $prop['desc'] }}
                             </p>
 
-                            <!-- Price Bubble & Brand Green Action Button -->
-                            <div class="flex items-center gap-4 sm:gap-6 flex-wrap pt-1">
-                                <!-- 3D Bubble -->
-                                <div class="clenix-3d-bubble">
-                                    <div class="text-[22px] sm:text-[28px] font-heading font-medium leading-none">
-                                        <span class="text-sm sm:text-base font-light">₹</span>1,499
-                                    </div>
-                                    <div class="text-[9px] sm:text-[11px] text-white/80 uppercase tracking-widest font-light mt-1">
-                                        Start From
-                                    </div>
-                                </div>
+                            <!-- Bullet Points with Green Checkmarks (Listed one-by-one vertically) -->
+                            <ul class="flex flex-col space-y-2.5 pt-1 text-xs sm:text-sm text-slate-700">
+                                @foreach($prop['bullets'] as $bullet)
+                                    <li class="flex items-start gap-2.5">
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                                        <span class="leading-snug">{{ $bullet }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
 
-                                <!-- Brand Green Book Now Button with White Text -->
-                                <a href="#quote" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium text-xs sm:text-sm lg:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                                    <span>Book Now</span>
-                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            <!-- Action Buttons -->
+                            <div class="flex flex-wrap items-center gap-3.5 pt-3">
+                                <a href="{{ route('contact') }}?service={{ urlencode($prop['title']) }}" 
+                                   class="inline-flex items-center gap-2 bg-[#81BA41] hover:bg-[#72aa38] text-white font-heading text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group/btn">
+                                    <span>Book This Service</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </a>
+
+                                <a href="https://wa.me/919500475798?text=Hello%20Clean%20Matrix%2C%20I%20would%20like%20to%20enquire%20about%20{{ urlencode($prop['title']) }}" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="inline-flex items-center gap-2.5 bg-transparent border border-slate-300 hover:border-[#25D366] text-slate-700 hover:text-[#25D366] font-heading text-xs sm:text-sm font-medium px-5 py-3.5 rounded-xl transition-all duration-200 hover:bg-emerald-50/30 group/wa">
+                                    <span class="w-5 h-5 sm:w-5.5 sm:h-5.5 flex items-center justify-center shrink-0">
+                                        <img src="{{ asset('images/whatsapp-icon.svg') }}" alt="WhatsApp" class="w-full h-full object-contain group-hover/wa:scale-110 transition-transform">
+                                    </span>
+                                    <span>Quick WhatsApp Enquiry</span>
                                 </a>
                             </div>
 
-                            <!-- Faint Watermark Outline Icon -->
-                            <div class="absolute right-4 -bottom-6 opacity-[0.08] pointer-events-none text-white select-none hidden sm:block">
-                                <i data-lucide="home" class="w-44 h-44 stroke-[1.2]"></i>
-                            </div>
                         </div>
 
-                        <!-- Right Photo Area (Zero bottom gap on mobile) -->
-                        <div class="w-full lg:w-[46%] relative flex-1 h-[260px] sm:h-[320px] lg:h-auto min-h-[260px] sm:min-h-[320px] lg:min-h-[480px] overflow-hidden leading-none clenix-photo-col">
-                            <div class="w-full h-full clenix-banner-img-wrap leading-none">
-                                <img src="{{ asset('images/properties/residential.jpg') }}" alt="Residential Cleaning Clean Matrix" class="w-full h-full object-cover block align-bottom">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <!-- ================= IMAGE COLUMN ================= -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] shadow-md hover:shadow-xl border border-slate-100 transition-all duration-300">
+                                <img src="{{ $prop['image'] }}" 
+                                     alt="{{ $prop['title'] }} — Clean Matrix" 
+                                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                                
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <!-- ================= SLIDE 1: SCHOOLS ================= -->
-                <div class="w-[20%] flex-shrink-0">
-                    <div class="flex flex-col lg:flex-row items-stretch h-full">
-                        <div class="w-full lg:w-[54%] p-6 sm:p-10 lg:p-14 z-10 flex flex-col justify-center relative">
-                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-[40px] font-normal text-white leading-tight mb-3 sm:mb-4">
-                                School Cleaning
-                            </h3>
-
-                            <p class="font-body text-xs sm:text-sm lg:text-base text-white/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-lg">
-                                Specialized child-safe sanitisation for kindergartens, primary schools, and daycare centers. Non-toxic chemicals with flexible after-school and weekend schedules ensuring zero academic disruption.
-                            </p>
-
-                            <div class="flex items-center gap-4 sm:gap-6 flex-wrap pt-1">
-                                <div class="clenix-3d-bubble">
-                                    <div class="text-[22px] sm:text-[28px] font-heading font-medium leading-none">
-                                        <span class="text-sm sm:text-base font-light">₹</span>3,999
-                                    </div>
-                                    <div class="text-[9px] sm:text-[11px] text-white/80 uppercase tracking-widest font-light mt-1">
-                                        Start From
-                                    </div>
+                                <!-- Subtle Corner Tag -->
+                                <div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-800 shadow-sm border border-slate-100">
+                                    Mechanized &amp; Inspected
                                 </div>
-
-                                <a href="#quote" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium text-xs sm:text-sm lg:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                                    <span>Book Now</span>
-                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <div class="absolute right-4 -bottom-6 opacity-[0.08] pointer-events-none text-white select-none hidden sm:block">
-                                <i data-lucide="book-open" class="w-44 h-44 stroke-[1.2]"></i>
                             </div>
                         </div>
 
-                        <div class="w-full lg:w-[46%] relative flex-1 h-[260px] sm:h-[320px] lg:h-auto min-h-[260px] sm:min-h-[320px] lg:min-h-[480px] overflow-hidden leading-none clenix-photo-col">
-                            <div class="w-full h-full clenix-banner-img-wrap leading-none">
-                                <img src="{{ asset('images/properties/school.jpg') }}" alt="School Cleaning Clean Matrix" class="w-full h-full object-cover block align-bottom">
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- ================= SLIDE 2: COLLEGES ================= -->
-                <div class="w-[20%] flex-shrink-0">
-                    <div class="flex flex-col lg:flex-row items-stretch h-full">
-                        <div class="w-full lg:w-[54%] p-6 sm:p-10 lg:p-14 z-10 flex flex-col justify-center relative">
-                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-[40px] font-normal text-white leading-tight mb-3 sm:mb-4">
-                                Campus Cleaning
-                            </h3>
-
-                            <p class="font-body text-xs sm:text-sm lg:text-base text-white/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-lg">
-                                High-capacity janitorial management for university lecture halls, auditoriums, campus laboratories, dining halls, and student hostels using industrial mechanized floor polishers.
-                            </p>
-
-                            <div class="flex items-center gap-4 sm:gap-6 flex-wrap pt-1">
-                                <div class="clenix-3d-bubble">
-                                    <div class="text-[20px] sm:text-[26px] font-heading font-medium leading-none">
-                                        Custom
-                                    </div>
-                                    <div class="text-[9px] sm:text-[11px] text-white/80 uppercase tracking-widest font-light mt-1">
-                                        Start From
-                                    </div>
-                                </div>
-
-                                <a href="#quote" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium text-xs sm:text-sm lg:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                                    <span>Book Now</span>
-                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <div class="absolute right-4 -bottom-6 opacity-[0.08] pointer-events-none text-white select-none hidden sm:block">
-                                <i data-lucide="graduation-cap" class="w-44 h-44 stroke-[1.2]"></i>
-                            </div>
-                        </div>
-
-                        <div class="w-full lg:w-[46%] relative flex-1 h-[260px] sm:h-[320px] lg:h-auto min-h-[260px] sm:min-h-[320px] lg:min-h-[480px] overflow-hidden leading-none clenix-photo-col">
-                            <div class="w-full h-full clenix-banner-img-wrap leading-none">
-                                <img src="{{ asset('images/properties/college.jpg') }}" alt="Campus Cleaning Clean Matrix" class="w-full h-full object-cover block align-bottom">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= SLIDE 3: COMMERCIAL ================= -->
-                <div class="w-[20%] flex-shrink-0">
-                    <div class="flex flex-col lg:flex-row items-stretch h-full">
-                        <div class="w-full lg:w-[54%] p-6 sm:p-10 lg:p-14 z-10 flex flex-col justify-center relative">
-                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-[40px] font-normal text-white leading-tight mb-3 sm:mb-4">
-                                Office Cleaning
-                            </h3>
-
-                            <p class="font-body text-xs sm:text-sm lg:text-base text-white/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-lg">
-                                Enterprise janitorial solutions for corporate towers, IT parks, and retail outlets. Streak-free glass partitions, desk disinfection, and silent night shifts ensuring zero business downtime.
-                            </p>
-
-                            <div class="flex items-center gap-4 sm:gap-6 flex-wrap pt-1">
-                                <div class="clenix-3d-bubble">
-                                    <div class="text-[22px] sm:text-[28px] font-heading font-medium leading-none">
-                                        <span class="text-sm sm:text-base font-light">₹</span>2,499
-                                    </div>
-                                    <div class="text-[9px] sm:text-[11px] text-white/80 uppercase tracking-widest font-light mt-1">
-                                        Start From
-                                    </div>
-                                </div>
-
-                                <a href="#quote" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium text-xs sm:text-sm lg:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                                    <span>Book Now</span>
-                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <div class="absolute right-4 -bottom-6 opacity-[0.08] pointer-events-none text-white select-none hidden sm:block">
-                                <i data-lucide="building-2" class="w-44 h-44 stroke-[1.2]"></i>
-                            </div>
-                        </div>
-
-                        <div class="w-full lg:w-[46%] relative flex-1 h-[260px] sm:h-[320px] lg:h-auto min-h-[260px] sm:min-h-[320px] lg:min-h-[480px] overflow-hidden leading-none clenix-photo-col">
-                            <div class="w-full h-full clenix-banner-img-wrap leading-none">
-                                <img src="{{ asset('images/properties/commercial.jpg') }}" alt="Commercial Cleaning Clean Matrix" class="w-full h-full object-cover block align-bottom">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= SLIDE 4: HANDOVER ================= -->
-                <div class="w-[20%] flex-shrink-0">
-                    <div class="flex flex-col lg:flex-row items-stretch h-full">
-                        <div class="w-full lg:w-[54%] p-6 sm:p-10 lg:p-14 z-10 flex flex-col justify-center relative">
-                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-[40px] font-normal text-white leading-tight mb-3 sm:mb-4">
-                                Handover Cleaning
-                            </h3>
-
-                            <p class="font-body text-xs sm:text-sm lg:text-base text-white/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-lg">
-                                Comprehensive post-renovation scrub, paint splatter removal, and deep sanitisation for newly completed villas, flats, or office handovers. Move into a fresh, spotless, turnkey space.
-                            </p>
-
-                            <div class="flex items-center gap-4 sm:gap-6 flex-wrap pt-1">
-                                <div class="clenix-3d-bubble">
-                                    <div class="text-[22px] sm:text-[28px] font-heading font-medium leading-none">
-                                        <span class="text-sm sm:text-base font-light">₹</span>2,999
-                                    </div>
-                                    <div class="text-[9px] sm:text-[11px] text-white/80 uppercase tracking-widest font-light mt-1">
-                                        Start From
-                                    </div>
-                                </div>
-
-                                <a href="#quote" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium text-xs sm:text-sm lg:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                                    <span>Book Now</span>
-                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <div class="absolute right-4 -bottom-6 opacity-[0.08] pointer-events-none text-white select-none hidden sm:block">
-                                <i data-lucide="key-round" class="w-44 h-44 stroke-[1.2]"></i>
-                            </div>
-                        </div>
-
-                        <!-- Photo Area: Zero blue space at bottom -->
-                        <div class="w-full lg:w-[46%] relative flex-1 h-[260px] sm:h-[320px] lg:h-auto min-h-[260px] sm:min-h-[320px] lg:min-h-[480px] overflow-hidden leading-none clenix-photo-col">
-                            <div class="w-full h-full clenix-banner-img-wrap leading-none">
-                                <img src="{{ asset('images/properties/handover.jpg') }}" alt="Handover Cleaning Clean Matrix" class="w-full h-full object-cover block align-bottom">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+            @endforeach
         </div>
 
     </div>
 </section>
-
-<!-- ======================================================== -->
-<!-- TAB SWITCHER & SMOOTH SLIDING JAVASCRIPT                 -->
-<!-- ======================================================== -->
-<script>
-    let currentClenixIndex = 0;
-    const totalClenixTabs = 5;
-
-    function switchClenixTab(index) {
-        currentClenixIndex = index;
-
-        // 1. Smoothly Slide the 500% Banner Track (Right-to-Left / Left-to-Right)
-        const sliderTrack = document.getElementById('clenixSliderTrack');
-        if (sliderTrack) {
-            sliderTrack.style.transform = `translateX(-${index * 20}%)`;
-        }
-
-        // 2. Update Tabs Active State (Blue background & White text)
-        const tabs = document.querySelectorAll('.clenix-prop-tab');
-        tabs.forEach((tab, i) => {
-            if (i === index) {
-                tab.classList.add('active');
-            } else {
-                tab.classList.remove('active');
-            }
-        });
-
-        // 3. On Mobile Screens, slide the inner tabs row so active tab is 100% visible
-        const isMobile = window.innerWidth < 640;
-        const tabsInner = document.getElementById('clenixTabsInner');
-        if (tabsInner) {
-            if (isMobile) {
-                tabsInner.style.transform = `translateX(-${index * 100}%)`;
-            } else {
-                tabsInner.style.transform = 'none';
-            }
-        }
-
-        // 4. Refresh Lucide Icons if dynamic
-        if (window.lucide) {
-            window.lucide.createIcons();
-        }
-    }
-
-    // Attach Left / Right Arrow listeners & Resize handler
-    document.addEventListener('DOMContentLoaded', () => {
-        const prevBtn = document.getElementById('clenixTabPrev');
-        const nextBtn = document.getElementById('clenixTabNext');
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                let prevIdx = (currentClenixIndex - 1 + totalClenixTabs) % totalClenixTabs;
-                switchClenixTab(prevIdx);
-            });
-        }
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                let nextIdx = (currentClenixIndex + 1) % totalClenixTabs;
-                switchClenixTab(nextIdx);
-            });
-        }
-
-        // Adjust tabs track transform on screen resize
-        window.addEventListener('resize', () => {
-            switchClenixTab(currentClenixIndex);
-        });
-    });
-</script>

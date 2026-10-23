@@ -35,12 +35,6 @@
 <!-- ============================================== -->
 <section class="relative bg-white pt-10 pb-16 sm:py-24 lg:py-28 overflow-hidden">
     
-    <!-- Large Subtle Background Sparkle Decoration (Monochrome Watermark from Reference) -->
-    <div class="absolute right-4 top-1/2 -translate-y-1/2 w-96 h-96 opacity-10 pointer-events-none text-secondary/40 select-none -z-0">
-        <svg viewBox="0 0 200 200" fill="currentColor">
-            <path d="M100 0 C100 60 140 100 200 100 C140 100 100 140 100 200 C100 140 60 100 0 100 C60 100 100 60 100 0 Z"/>
-        </svg>
-    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -110,44 +104,41 @@
             <!-- ========================================== -->
             <!-- RIGHT COLUMN: Headings, Checklist & CTA    -->
             <!-- ========================================== -->
-            <div class="lg:col-span-6 space-y-6 lg:pl-6 text-left relative">
+            <div class="lg:col-span-6 space-y-5 lg:pl-6 text-left relative">
 
-                <!-- Main Heading (Montserrat, Slim & Clean matching reference) -->
-                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-secondary">
-                    Making Your House <br>
-                    <span class="text-secondary-sub font-light">As Good As New</span>
+                <!-- Small Green Heading (Consistent with Theme Style) -->
+                <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                    ABOUT CLEAN MATRIX
+                </p>
+
+                <!-- Main Heading (Lexend, Bold & Theme Color matching Theme Standard) -->
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-[#0F172A]">
+                    Making Your House<br>
+                    As Good As New
                 </h2>
 
-                <!-- Subtitle Paragraph (Poppins, Light & Crisp) -->
-                <p class="font-body text-[15px] sm:text-base text-neutral-text font-light leading-relaxed">
+                <!-- Subtitle Paragraph -->
+                <p class="font-body text-sm sm:text-base text-slate-600 font-light leading-relaxed">
                     Clean Matrix delivers thorough, reliable, and hygienic cleaning solutions tailored to your lifestyle. Whether it's recurring housekeeping, specialized deep cleaning, or certified pest control, our vetted team ensures every corner is spotless and safe.
                 </p>
 
-                <!-- Key Benefits Checklist (Matching Reference Checkpoints) -->
-                <ul class="space-y-3.5 pt-2 font-body text-[14.5px] sm:text-[15px] text-neutral-text">
+                <!-- Key Benefits Checklist -->
+                <ul class="space-y-3 pt-1 font-body text-sm text-slate-700">
                     <li class="flex items-center gap-3">
-                        <div class="w-5 h-5 rounded-full bg-primary/15 text-primary-sub flex items-center justify-center shrink-0">
-                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                        </div>
-                        <span class="font-light">Experienced, trained & verified team</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                        <span class="font-normal">Experienced, trained &amp; verified team</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <div class="w-5 h-5 rounded-full bg-primary/15 text-primary-sub flex items-center justify-center shrink-0">
-                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                        </div>
-                        <span class="font-light">Keep the same cleaner for recurring visits</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                        <span class="font-normal">Keep the same cleaner for recurring visits</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <div class="w-5 h-5 rounded-full bg-primary/15 text-primary-sub flex items-center justify-center shrink-0">
-                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                        </div>
-                        <span class="font-light">One-off, weekly, or fortnightly visits</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                        <span class="font-normal">One-off, weekly, or fortnightly visits</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <div class="w-5 h-5 rounded-full bg-primary/15 text-primary-sub flex items-center justify-center shrink-0">
-                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                        </div>
-                        <span class="font-light">Book, manage & pay with transparent pricing</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                        <span class="font-normal">Book, manage &amp; pay with transparent pricing</span>
                     </li>
                 </ul>
 

@@ -1,22 +1,30 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Clean Matrix | Request a Cleaning Quote')
-@section('meta_description', 'Contact Clean Matrix about housekeeping, deep cleaning or pest control in Coimbatore. Call +91 95666 66199 or send your requirements to request an instant quotation.')
+@section('meta_description', 'Contact Clean Matrix for residential housekeeping, deep cleaning or pest control in Coimbatore. Call +91 95004 75798 or send an inquiry.')
 
 @section('content')
 
 <!-- ======================================================== -->
-<!-- 1. GLOBAL HEADER BANNER COMPONENT (Light Black Overlay)  -->
+<!-- 1. DYNAMIC PAGE HERO COMPONENT                           -->
 <!-- ======================================================== -->
-<x-page-banner title="Contact" breadcrumb="Contact" :bgImage="asset('images/contact-banner.jpg')" />
+<x-page-hero 
+    badge="GET IN TOUCH"
+    title="Get in Touch with<br class='hidden sm:inline'> Clean Matrix"
+    subtitle="Schedule an on-site property assessment, request a customized package quote, or connect directly with our Coimbatore operations team."
+    breadcrumb="Contact" 
+    :image="asset('images/contact-hero-support.jpg')" 
+    imageAlt="Clean Matrix Customer Support Specialist"
+    :showActions="true"
+/>
 
 <!-- ======================================================== -->
 <!-- 2. MAIN CONTACT SECTION: MAP & DETAILS + INQUIRY FORM     -->
 <!-- ======================================================== -->
-<section class="relative py-14 sm:py-20 bg-white font-body">
+<section class="relative py-14 sm:py-20 bg-white font-body border-b border-slate-100">
     <div class="max-w-[1520px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
 
-        <!-- 2-Column Clenix Contact Grid with Generous Spacing -->
+        <!-- 2-Column Contact Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
 
             <!-- ======================================================== -->
@@ -25,7 +33,7 @@
             <div class="lg:col-span-7 xl:col-span-8 space-y-8 order-2 lg:order-1">
 
                 <!-- Interactive Embedded Google Map (Coimbatore Operating Center) -->
-                <div class="w-full rounded-[6px] overflow-hidden border border-[#e2e8f0] shadow-sm relative group">
+                <div class="w-full rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm relative group">
                     <iframe 
                         title="Clean Matrix Coimbatore Operating Location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.51194266185!2d76.88483256087922!3d11.014207865203306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
@@ -36,24 +44,24 @@
                     </iframe>
                 </div>
 
-                <!-- 4 Contact Information Columns: Phone, E-mail, Location, Working Hours (Spacious Layout) -->
+                <!-- 4 Contact Information Columns: Phone, E-mail, Location, Working Hours -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 pt-4 border-t border-slate-100">
 
                     <!-- 1. Phone Block -->
                     <div class="space-y-2.5">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
                                 <i data-lucide="phone" class="w-5 h-5 stroke-[2.2]"></i>
                             </div>
-                            <h3 class="font-heading text-base sm:text-lg font-medium text-secondary tracking-tight">
+                            <h3 class="font-heading text-base sm:text-lg font-bold text-[#0F172A] tracking-tight">
                                 Phone:
                             </h3>
                         </div>
-                        <div class="space-y-1 pl-1 text-sm font-light text-neutral-text">
-                            <a href="tel:+919566666199" class="block hover:text-primary transition-colors tracking-wide whitespace-nowrap">
+                        <div class="space-y-1 pl-1 text-sm font-normal text-slate-600">
+                            <a href="tel:+919566666199" class="block hover:text-emerald-600 transition-colors tracking-wide whitespace-nowrap">
                                 +91 95666 66199
                             </a>
-                            <a href="tel:+919500475798" class="block hover:text-primary transition-colors tracking-wide whitespace-nowrap">
+                            <a href="tel:+919500475798" class="block hover:text-emerald-600 transition-colors tracking-wide whitespace-nowrap">
                                 +91 95004 75798
                             </a>
                         </div>
@@ -62,18 +70,18 @@
                     <!-- 2. E-mail Block -->
                     <div class="space-y-2.5">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
                                 <i data-lucide="mail" class="w-5 h-5 stroke-[2.2]"></i>
                             </div>
-                            <h3 class="font-heading text-base sm:text-lg font-medium text-secondary tracking-tight">
+                            <h3 class="font-heading text-base sm:text-lg font-bold text-[#0F172A] tracking-tight">
                                 E-mail:
                             </h3>
                         </div>
-                        <div class="space-y-1 pl-1 text-sm font-light text-neutral-text">
-                            <a href="mailto:info@cleanmatrix.in" class="block hover:text-primary transition-colors truncate">
+                        <div class="space-y-1 pl-1 text-sm font-normal text-slate-600">
+                            <a href="mailto:info@cleanmatrix.in" class="block hover:text-emerald-600 transition-colors truncate">
                                 info@cleanmatrix.in
                             </a>
-                            <a href="mailto:support@cleanmatrix.in" class="block hover:text-primary transition-colors truncate">
+                            <a href="mailto:support@cleanmatrix.in" class="block hover:text-emerald-600 transition-colors truncate">
                                 support@cleanmatrix.in
                             </a>
                         </div>
@@ -82,15 +90,15 @@
                     <!-- 3. Location Block (Coimbatore) -->
                     <div class="space-y-2.5">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
                                 <i data-lucide="map-pin" class="w-5 h-5 stroke-[2.2]"></i>
                             </div>
-                            <h3 class="font-heading text-base sm:text-lg font-medium text-secondary tracking-tight">
+                            <h3 class="font-heading text-base sm:text-lg font-bold text-[#0F172A] tracking-tight">
                                 Location:
                             </h3>
                         </div>
-                        <div class="space-y-1 pl-1 text-xs sm:text-sm font-light text-neutral-text leading-relaxed">
-                            <p class="font-medium text-secondary-sub">RS Puram &amp; Avinashi Rd</p>
+                        <div class="space-y-1 pl-1 text-xs sm:text-sm font-normal text-slate-600 leading-relaxed">
+                            <p class="font-semibold text-[#0F172A]">RS Puram &amp; Avinashi Rd</p>
                             <p>Coimbatore, TN 641002</p>
                         </div>
                     </div>
@@ -98,16 +106,16 @@
                     <!-- 4. Working Hours Block (Next to Location) -->
                     <div class="space-y-2.5">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
                                 <i data-lucide="clock" class="w-5 h-5 stroke-[2.2]"></i>
                             </div>
-                            <h3 class="font-heading text-base sm:text-lg font-medium text-secondary tracking-tight">
+                            <h3 class="font-heading text-base sm:text-lg font-bold text-[#0F172A] tracking-tight">
                                 Hours:
                             </h3>
                         </div>
-                        <div class="space-y-1 pl-1 text-xs sm:text-sm font-light text-neutral-text leading-relaxed">
+                        <div class="space-y-1 pl-1 text-xs sm:text-sm font-normal text-slate-600 leading-relaxed">
                             <p>Mon - Sun: 7am - 9pm</p>
-                            <p class="text-primary font-medium">Emergency 24/7</p>
+                            <p class="text-emerald-600 font-semibold">Emergency 24/7</p>
                         </div>
                     </div>
 
@@ -119,23 +127,29 @@
             <!-- RIGHT COLUMN: HAVE ANY QUESTION? CONTACT & QUOTE CARD     -->
             <!-- ======================================================== -->
             <div class="lg:col-span-5 xl:col-span-4 order-1 lg:order-2">
-                <div class="bg-white border border-[#eaedf2] rounded-[6px] p-6 sm:p-8 shadow-sm">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
                     
-                    <!-- Card Heading with Primary Green Underline -->
-                    <div class="mb-6">
-                        <h2 class="font-heading text-xl sm:text-2xl font-medium text-secondary tracking-tight">
-                            Have you Any Question?
+                    <!-- Card Heading with Small Green Label -->
+                    <div class="mb-6 space-y-1">
+                        <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                            SEND AN INQUIRY
+                        </p>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight">
+                            Have Any Questions?
                         </h2>
-                        <div class="w-10 h-[3px] bg-primary mt-2.5 rounded-full"></div>
                     </div>
 
-                    <!-- SUCCESS STATE BOX (Exact match to Clenix Theme Screenshot 3) -->
-                    <div id="contactSuccessState" class="hidden border border-[#e2e8f0] p-6 text-sm text-[#475569] font-light text-left rounded-[4px] bg-[#f8fafc] leading-relaxed animate-fade-in">
-                        Thank you for your message. We will get in touch with you shortly
+                    <!-- SUCCESS STATE BOX -->
+                    <div id="contactSuccessState" class="hidden border border-emerald-200 p-6 text-sm text-slate-700 font-normal text-left rounded-xl bg-emerald-50/50 leading-relaxed animate-fade-in space-y-2">
+                        <div class="flex items-center gap-2 text-emerald-600 font-bold font-heading">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Message Sent Successfully</span>
+                        </div>
+                        <p>Thank you for reaching out. A Clean Matrix service coordinator will contact you shortly.</p>
                     </div>
 
-                    <!-- Contact Form (5 Standard Placeholders + Normal Black Typed Text) -->
-                    <form id="contactFormContainer" onsubmit="handleContactPageSubmit(event)" class="space-y-4">
+                    <!-- Contact Form -->
+                    <form id="contactFormContainer" onsubmit="handleContactPageSubmit(event)" class="space-y-4 font-body">
                         @csrf
 
                         <!-- 1. Name* Field -->
@@ -143,8 +157,8 @@
                             <input type="text" 
                                    name="name" 
                                    required 
-                                   placeholder="Name*" 
-                                   class="w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-4 py-3.5 text-sm text-black placeholder:text-[#94a3b8] focus:border-primary focus:bg-white focus:outline-none transition-colors">
+                                   placeholder="Your Name*" 
+                                   class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
                         </div>
 
                         <!-- 2. Email Address* Field -->
@@ -153,7 +167,7 @@
                                    name="email" 
                                    required 
                                    placeholder="Email Address*" 
-                                   class="w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-4 py-3.5 text-sm text-black placeholder:text-[#94a3b8] focus:border-primary focus:bg-white focus:outline-none transition-colors">
+                                   class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
                         </div>
 
                         <!-- 3. Phone* Field -->
@@ -161,8 +175,8 @@
                             <input type="tel" 
                                    name="phone" 
                                    required 
-                                   placeholder="Phone*" 
-                                   class="w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-4 py-3.5 text-sm text-black placeholder:text-[#94a3b8] focus:border-primary focus:bg-white focus:outline-none transition-colors">
+                                   placeholder="Phone Number*" 
+                                   class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
                         </div>
 
                         <!-- 4. Subject* Field -->
@@ -170,34 +184,35 @@
                             <input type="text" 
                                    name="subject" 
                                    required 
-                                   placeholder="Subject*" 
-                                   class="w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-4 py-3.5 text-sm text-black placeholder:text-[#94a3b8] focus:border-primary focus:bg-white focus:outline-none transition-colors">
+                                   placeholder="Property Type or Service Required*" 
+                                   class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
                         </div>
 
                         <!-- 5. Message Field -->
                         <div>
                             <textarea name="message" 
                                       rows="4" 
-                                      placeholder="Message" 
-                                      class="w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-4 py-3.5 text-sm text-black placeholder:text-[#94a3b8] focus:border-primary focus:bg-white focus:outline-none transition-colors resize-none"></textarea>
+                                      placeholder="Describe your requirements (e.g. 3BHK deep cleaning, office sanitization...)" 
+                                      class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors resize-none"></textarea>
                         </div>
 
-                        <!-- Submit Button in Clean Matrix Theme Green (#81BA41) -->
+                        <!-- Submit Button in Theme Green -->
                         <div class="pt-2">
                             <button type="submit" 
                                     id="contactPageSubmitBtn" 
-                                    class="w-full bg-[#81BA41] hover:bg-[#72a637] text-white font-medium text-sm py-3.5 px-6 rounded-[4px] transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center gap-2">
+                                    class="w-full bg-[#81BA41] hover:bg-[#72aa38] text-white font-heading font-semibold text-sm sm:text-base py-3.5 px-6 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
                                 <span>Send Message</span>
                             </button>
                         </div>
 
-                        <!-- Loader Appearing Directly Below the Send Button While Sending -->
-                        <div id="contactFormLoader" class="hidden flex items-center justify-center gap-2.5 py-3 text-secondary text-sm font-medium">
-                            <svg class="animate-spin h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <!-- Loader -->
+                        <div id="contactFormLoader" class="hidden flex items-center justify-center gap-2.5 py-3 text-slate-700 text-sm font-medium">
+                            <svg class="animate-spin h-5 w-5 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
                             </svg>
-                            <span class="text-xs sm:text-sm text-neutral-text font-light">Sending your message...</span>
+                            <span class="text-xs sm:text-sm text-slate-500 font-normal">Sending your message...</span>
                         </div>
                     </form>
 
@@ -209,7 +224,7 @@
     </div>
 </section>
 
-<!-- Contact Form AJAX Submission with Spinner Loader & Screenshot 3 Replacement -->
+<!-- Contact Form AJAX Submission with Spinner Loader -->
 <script>
     function handleContactPageSubmit(event) {
         event.preventDefault();
@@ -218,7 +233,6 @@
         const loader = document.getElementById('contactFormLoader');
         const successBox = document.getElementById('contactSuccessState');
         
-        // Show loader below Send button and disable button
         btn.disabled = true;
         btn.classList.add('opacity-75');
         loader.classList.remove('hidden');
@@ -235,18 +249,16 @@
         })
         .then(response => response.json())
         .then(data => {
-            // Hide loader
             loader.classList.add('hidden');
-            
-            // Replace form with clean confirmation box (Exact match to Screenshot 3)
             form.classList.add('hidden');
             successBox.classList.remove('hidden');
+            if (window.lucide) { window.lucide.createIcons(); }
         })
         .catch(err => {
-            // Graceful completion for demonstration
             loader.classList.add('hidden');
             form.classList.add('hidden');
             successBox.classList.remove('hidden');
+            if (window.lucide) { window.lucide.createIcons(); }
         });
     }
 </script>

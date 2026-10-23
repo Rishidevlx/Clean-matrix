@@ -2,15 +2,18 @@
 <!-- COMPONENT: PACKAGES COMPARISON MATRIX & INCLUSIONS SCOPE  -->
 <!-- Reusable across Packages, Home, Services, etc.            -->
 <!-- ======================================================== -->
-<section class="pt-4 sm:pt-6 pb-16 sm:pb-24 bg-[#f4f7fc] font-body relative border-0">
+<section class="pt-4 sm:pt-6 pb-16 sm:pb-24 bg-white font-body relative border-0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header (Clean Title & Subtitle without Badge, Compact Balanced Spacing) -->
-        <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8 space-y-2">
-            <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-secondary">
+        <!-- Section Header with Small Green Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                PACKAGE MATRIX
+            </p>
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A]">
                 Detailed Scope, Inclusions &amp; Comparison
             </h2>
-            <p class="font-body text-sm text-neutral-text font-light leading-relaxed max-w-2xl mx-auto">
+            <p class="font-body text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto pt-1">
                 Review every detail before our team arrives. Compare scope, coverage, duration, exclusions and guarantees across our signature cleaning packages.
             </p>
         </div>

@@ -1,380 +1,229 @@
 <!-- ======================================================== -->
-<!-- CLIENT TESTIMONIALS / REVIEWS SECTION (Exact Clenix Testimonial 2) -->
+<!-- CLIENT TESTIMONIALS SECTION: Pronto Inspired 2-Row Marquee -->
+<!-- Hover pauses the specific row | Left & Right Gradient Mask -->
 <!-- ======================================================== -->
 
 <style>
-    /* Clenix Testimonial Card Hover Lift */
-    .clenix-testimonial-card {
-        border-radius: 6px;
-        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-        user-select: none;
-        -webkit-user-select: none;
+    @keyframes marqueeLeft {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
     }
-    .clenix-testimonial-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 14px 28px -8px rgba(0, 68, 139, 0.08);
-        border-color: #cbd5e1;
+    @keyframes marqueeRight {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0%); }
     }
-    
-    /* Pagination indicator pills */
-    .testimonial-dot {
-        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    .marquee-row-1 {
+        display: flex;
+        width: max-content;
+        animation: marqueeLeft 42s linear infinite;
+        will-change: transform;
     }
-    .testimonial-dot.active {
-        width: 1.85rem; /* ~30px wide pill */
-        background-color: #287ff9;
+    .marquee-row-2 {
+        display: flex;
+        width: max-content;
+        animation: marqueeRight 45s linear infinite;
+        will-change: transform;
     }
-    .testimonial-dot:not(.active) {
-        width: 0.6rem; /* ~10px dot */
-        background-color: #cbd5e1;
-    }
-    .testimonial-dot:not(.active):hover {
-        background-color: #94a3b8;
-    }
-
-    #testimonialSliderWrapper.cursor-grabbing {
-        cursor: grabbing !important;
-        user-select: none;
+    .marquee-row-1:hover,
+    .marquee-row-2:hover {
+        animation-play-state: paused !important;
     }
 </style>
 
-<section id="testimonials" class="relative py-8 sm:py-12 bg-white overflow-hidden border-t border-neutral-border/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<section id="testimonials" class="relative py-16 sm:py-24 bg-white overflow-hidden border-t border-slate-200/80 font-body">
+    
+    <!-- Section Header (Exact Pronto Style) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 text-center">
+        <span class="inline-block text-primary text-xs sm:text-[13px] font-heading font-bold uppercase tracking-widest mb-2.5">
+            OUR TESTIMONIALS
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C0C0C] tracking-tight mb-3">
+            Loved by Clean Matrix homes.
+        </h2>
+        <p class="font-body text-xs sm:text-sm text-[#666666] font-light max-w-xl mx-auto leading-relaxed">
+            Real reviews from real homes, villa communities, and corporate facilities across Coimbatore.
+        </p>
+    </div>
 
-        <!-- Section Header (Ultra-compact so section fits 100% on laptop screen) -->
-        <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8 space-y-1">
-            <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-secondary">
-                Verified Client Reviews
-            </h2>
-            <p class="font-body text-xs sm:text-sm text-neutral-text font-light leading-relaxed max-w-xl mx-auto">
-                Real experiences from homeowners, villa communities, and corporate facilities across Chennai who trust Clean Matrix.
-            </p>
+    <!-- Infinite Carousel Outer Container with Left and Right Fade Gradients -->
+    <div class="relative w-full overflow-hidden space-y-6">
+        
+        <!-- Left Smooth Fade Gradient Mask -->
+        <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-32 lg:w-44 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-20"></div>
+
+        <!-- Right Smooth Fade Gradient Mask -->
+        <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-32 lg:w-44 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none z-20"></div>
+
+        @php
+            // Row 1 Testimonials
+            $row1 = [
+                [
+                    'quote' => 'I’d say it was great value for money. The urgency was handled well, without compromising quality. Really satisfied with the experience.',
+                    'author' => 'Kirti',
+                    'location' => 'Peelamedu, Coimbatore',
+                    'initial' => 'K',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'The service was simple and effective. It met my expectations without any hassle. Good overall experience with the mechanized team.',
+                    'author' => 'Neha',
+                    'location' => 'RS Puram, Coimbatore',
+                    'initial' => 'N',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Great work, my home was left spotless and fresh. The cleaning was thorough, and I appreciated the attention to detail. I’ll recommend it. 👍',
+                    'author' => 'Pradnyesh',
+                    'location' => 'Race Course, Coimbatore',
+                    'initial' => 'P',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'The services have definitely improved our workplace hygiene. Team is polite, punctual, and very systematic with the machine scrubbers.',
+                    'author' => 'Ridhi Saluja',
+                    'location' => 'Saravanampatti Tech Park',
+                    'initial' => 'R',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Moved into a new villa in Vadavalli. Clean Matrix did complete post-construction restoration with zero chemical odor. Top notch work!',
+                    'author' => 'Vigneshwaran',
+                    'location' => 'Vadavalli, Coimbatore',
+                    'initial' => 'V',
+                    'rating' => 5,
+                ],
+            ];
+
+            // Row 2 Testimonials
+            $row2 = [
+                [
+                    'quote' => 'Really liked your service, it was smooth, efficient, and just what I needed. Would definitely recommend to others in our apartment community. 🌟',
+                    'author' => 'Sameer',
+                    'location' => 'Saibaba Colony, Coimbatore',
+                    'initial' => 'S',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Absolutely excellent service! The team was prompt and professional throughout. Would love to use it again for our regular maintenance.',
+                    'author' => 'Karishma',
+                    'location' => 'Gandhipuram, Coimbatore',
+                    'initial' => 'K',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Really impressive compared to local vendors. Communication was clear, quotes were transparent, and fast — very pleased with Clean Matrix!',
+                    'author' => 'Rabia',
+                    'location' => 'Ramanathapuram, Coimbatore',
+                    'initial' => 'R',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Seamless experience from booking to completion. The staff was courteous, punctual, and did a fantastic job on the sofa shampooing.',
+                    'author' => 'Ritika',
+                    'location' => 'Singanallur, Coimbatore',
+                    'initial' => 'R',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Their 6-in-1 combo package for our 3BHK flat was worth every rupee. Single disc scrubbing brought our faded tiles back to life!',
+                    'author' => 'Anand Kumar',
+                    'location' => 'Thudiyalur, Coimbatore',
+                    'initial' => 'A',
+                    'rating' => 5,
+                ],
+            ];
+        @endphp
+
+        <!-- ROW 1 (Continuous Scrolling Left | Pauses on Hover) -->
+        <div class="relative overflow-hidden cursor-default py-1">
+            <div class="marquee-row-1 gap-6 px-4">
+                {{-- Loop twice for seamless infinite loop --}}
+                @for ($pass = 0; $pass < 2; $pass++)
+                    @foreach ($row1 as $item)
+                        <div class="w-[300px] sm:w-[340px] md:w-[360px] shrink-0 bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 shadow-xs hover:shadow-lg hover:border-slate-300 transition-all duration-300 flex flex-col justify-between">
+                            
+                            <div>
+                                <!-- 5 Green Stars (Exact Pronto Theme) -->
+                                <div class="flex items-center gap-1 text-[#81BA41] mb-3.5">
+                                    @for ($s = 0; $s < $item['rating']; $s++)
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    @endfor
+                                </div>
+
+                                <!-- Review Quote Text -->
+                                <p class="font-body text-xs sm:text-[13px] text-[#222222] font-normal leading-relaxed mb-6">
+                                    “{{ $item['quote'] }}”
+                                </p>
+                            </div>
+
+                            <!-- Author Info with Round Initial Avatar -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <div class="w-8 h-8 rounded-full bg-emerald-50 text-primary-sub font-heading font-bold text-xs flex items-center justify-center shrink-0 border border-emerald-100">
+                                    {{ $item['initial'] }}
+                                </div>
+                                <div class="leading-tight">
+                                    <div class="font-heading font-bold text-xs sm:text-[13px] text-[#0C0C0C]">
+                                        {{ $item['author'] }}
+                                    </div>
+                                    <div class="text-[11px] text-[#666666] font-light mt-0.5">
+                                        {{ $item['location'] }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    @endforeach
+                @endfor
+            </div>
         </div>
 
-        <!-- Testimonial Slider Outer Wrapper (Draggable Container) -->
-        <div id="testimonialSliderWrapper" class="max-w-5xl mx-auto relative overflow-hidden cursor-grab select-none">
-            
-            <!-- Slides Flex Track -->
-            <div id="testimonialTrack" class="flex transition-transform duration-500 ease-out will-change-transform">
+        <!-- ROW 2 (Continuous Scrolling Right | Pauses on Hover) -->
+        <div class="relative overflow-hidden cursor-default py-1">
+            <div class="marquee-row-2 gap-6 px-4">
+                {{-- Loop twice for seamless infinite loop --}}
+                @for ($pass = 0; $pass < 2; $pass++)
+                    @foreach ($row2 as $item)
+                        <div class="w-[300px] sm:w-[340px] md:w-[360px] shrink-0 bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 shadow-xs hover:shadow-lg hover:border-slate-300 transition-all duration-300 flex flex-col justify-between">
+                            
+                            <div>
+                                <!-- 5 Green Stars (Exact Pronto Theme) -->
+                                <div class="flex items-center gap-1 text-[#81BA41] mb-3.5">
+                                    @for ($s = 0; $s < $item['rating']; $s++)
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    @endfor
+                                </div>
 
-                <!-- ================= SLIDE 1 (2 Cards) ================= -->
-                <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 px-2">
-                    
-                    <!-- Review Card 1 -->
-                    <div class="clenix-testimonial-card bg-white border border-[#eaedf2] p-4 sm:p-5 text-center flex flex-col justify-between shadow-sm relative group">
-                        <div>
-                            <!-- Watermark Quotation Icon -->
-                            <div class="flex justify-center mb-2 text-[#e2e8f0] group-hover:text-[#287ff9]/30 transition-colors duration-300">
-                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                                </svg>
+                                <!-- Review Quote Text -->
+                                <p class="font-body text-xs sm:text-[13px] text-[#222222] font-normal leading-relaxed mb-6">
+                                    “{{ $item['quote'] }}”
+                                </p>
                             </div>
 
-                            <!-- Review Text -->
-                            <p class="font-body text-neutral-text text-[13px] sm:text-[13.5px] font-light leading-relaxed mb-3 italic max-w-md mx-auto pointer-events-none">
-                                &ldquo;The 6-in-1 deep clean for our 4BHK villa in ECR was phenomenal. Their German mechanized scrubbing removed years of salt water stain on the balcony glass, and the team was polite, uniform-clad, and punctual.&rdquo;
-                            </p>
+                            <!-- Author Info with Round Initial Avatar -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <div class="w-8 h-8 rounded-full bg-emerald-50 text-primary-sub font-heading font-bold text-xs flex items-center justify-center shrink-0 border border-emerald-100">
+                                    {{ $item['initial'] }}
+                                </div>
+                                <div class="leading-tight">
+                                    <div class="font-heading font-bold text-xs sm:text-[13px] text-[#0C0C0C]">
+                                        {{ $item['author'] }}
+                                    </div>
+                                    <div class="text-[11px] text-[#666666] font-light mt-0.5">
+                                        {{ $item['location'] }}
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-
-                        <div>
-                            <!-- Client Avatar with strict fixed dimensions -->
-                            <div class="mb-1.5 flex justify-center">
-                                <img src="{{ asset('images/testimonials/client1.jpg') }}" alt="Arun Sundaram" style="width: 54px; height: 54px; min-width: 54px; min-height: 54px;" class="rounded-full object-cover border-2 border-white shadow-sm pointer-events-none select-none mx-auto" draggable="false">
-                            </div>
-
-                            <!-- Client Name -->
-                            <h4 class="font-heading text-sm sm:text-[15px] font-medium text-secondary-sub tracking-tight pointer-events-none">
-                                Arun Sundaram
-                            </h4>
-
-                            <!-- Client Role -->
-                            <p class="font-body text-[11px] text-neutral-text/75 font-light mt-0.5 pointer-events-none">
-                                Villa Resident, ECR Chennai
-                            </p>
-
-                            <!-- Star Rating -->
-                            <div class="flex items-center justify-center gap-0.5 text-[#ff9800] mt-1.5 pointer-events-none">
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review Card 2 -->
-                    <div class="clenix-testimonial-card bg-white border border-[#eaedf2] p-4 sm:p-5 text-center flex flex-col justify-between shadow-sm relative group">
-                        <div>
-                            <!-- Watermark Quotation Icon -->
-                            <div class="flex justify-center mb-2 text-[#e2e8f0] group-hover:text-[#287ff9]/30 transition-colors duration-300">
-                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                                </svg>
-                            </div>
-
-                            <!-- Review Text -->
-                            <p class="font-body text-neutral-text text-[13px] sm:text-[13.5px] font-light leading-relaxed mb-3 italic max-w-md mx-auto pointer-events-none">
-                                &ldquo;We contracted Clean Matrix for post-renovation handover of our tech park office in Guindy. Zero chemical odor, completely streak-free glass facades, and spotless tile restoration. Highly dependable team!&rdquo;
-                            </p>
-                        </div>
-
-                        <div>
-                            <!-- Client Avatar with strict fixed dimensions -->
-                            <div class="mb-1.5 flex justify-center">
-                                <img src="{{ asset('images/testimonials/client2.jpg') }}" alt="Priya Chandrasekhar" style="width: 54px; height: 54px; min-width: 54px; min-height: 54px;" class="rounded-full object-cover border-2 border-white shadow-sm pointer-events-none select-none mx-auto" draggable="false">
-                            </div>
-
-                            <!-- Client Name -->
-                            <h4 class="font-heading text-sm sm:text-[15px] font-medium text-secondary-sub tracking-tight pointer-events-none">
-                                Priya Chandrasekhar
-                            </h4>
-
-                            <!-- Client Role -->
-                            <p class="font-body text-[11px] text-neutral-text/75 font-light mt-0.5 pointer-events-none">
-                                Facility Director, Guindy IT Park
-                            </p>
-
-                            <!-- Star Rating -->
-                            <div class="flex items-center justify-center gap-0.5 text-[#ff9800] mt-1.5 pointer-events-none">
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- ================= SLIDE 2 (2 Cards) ================= -->
-                <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 px-2">
-                    
-                    <!-- Review Card 3 -->
-                    <div class="clenix-testimonial-card bg-white border border-[#eaedf2] p-4 sm:p-5 text-center flex flex-col justify-between shadow-sm relative group">
-                        <div>
-                            <!-- Watermark Quotation Icon -->
-                            <div class="flex justify-center mb-2 text-[#e2e8f0] group-hover:text-[#287ff9]/30 transition-colors duration-300">
-                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                                </svg>
-                            </div>
-
-                            <!-- Review Text -->
-                            <p class="font-body text-neutral-text text-[13px] sm:text-[13.5px] font-light leading-relaxed mb-3 italic max-w-md mx-auto pointer-events-none">
-                                &ldquo;Their team cleaned our residential apartment in Anna Nagar before our housewarming ceremony. Every single corner, inside wardrobes, and kitchen cabinets were meticulously wiped down. Highly satisfied!&rdquo;
-                            </p>
-                        </div>
-
-                        <div>
-                            <!-- Client Avatar with strict fixed dimensions -->
-                            <div class="mb-1.5 flex justify-center">
-                                <img src="{{ asset('images/testimonials/client3.jpg') }}" alt="Dr. K. Ramanathan" style="width: 54px; height: 54px; min-width: 54px; min-height: 54px;" class="rounded-full object-cover border-2 border-white shadow-sm pointer-events-none select-none mx-auto" draggable="false">
-                            </div>
-
-                            <!-- Client Name -->
-                            <h4 class="font-heading text-sm sm:text-[15px] font-medium text-secondary-sub tracking-tight pointer-events-none">
-                                Dr. K. Ramanathan
-                            </h4>
-
-                            <!-- Client Role -->
-                            <p class="font-body text-[11px] text-neutral-text/75 font-light mt-0.5 pointer-events-none">
-                                Homeowner, Anna Nagar Chennai
-                            </p>
-
-                            <!-- Star Rating -->
-                            <div class="flex items-center justify-center gap-0.5 text-[#ff9800] mt-1.5 pointer-events-none">
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review Card 4 -->
-                    <div class="clenix-testimonial-card bg-white border border-[#eaedf2] p-4 sm:p-5 text-center flex flex-col justify-between shadow-sm relative group">
-                        <div>
-                            <!-- Watermark Quotation Icon -->
-                            <div class="flex justify-center mb-2 text-[#e2e8f0] group-hover:text-[#287ff9]/30 transition-colors duration-300">
-                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                                </svg>
-                            </div>
-
-                            <!-- Review Text -->
-                            <p class="font-body text-neutral-text text-[13px] sm:text-[13.5px] font-light leading-relaxed mb-3 italic max-w-md mx-auto pointer-events-none">
-                                &ldquo;We trust Clean Matrix for our campus-wide holiday sanitization. Certified eco-friendly disinfectants and police-verified staff give our parents total confidence in campus hygiene standards.&rdquo;
-                            </p>
-                        </div>
-
-                        <div>
-                            <!-- Client Avatar with strict fixed dimensions -->
-                            <div class="mb-1.5 flex justify-center">
-                                <img src="{{ asset('images/testimonials/client4.jpg') }}" alt="Meenakshi Sundaram" style="width: 54px; height: 54px; min-width: 54px; min-height: 54px;" class="rounded-full object-cover border-2 border-white shadow-sm pointer-events-none select-none mx-auto" draggable="false">
-                            </div>
-
-                            <!-- Client Name -->
-                            <h4 class="font-heading text-sm sm:text-[15px] font-medium text-secondary-sub tracking-tight pointer-events-none">
-                                Meenakshi Sundaram
-                            </h4>
-
-                            <!-- Client Role -->
-                            <p class="font-body text-[11px] text-neutral-text/75 font-light mt-0.5 pointer-events-none">
-                                Administrator, Vidya Mandir Campus
-                            </p>
-
-                            <!-- Star Rating -->
-                            <div class="flex items-center justify-center gap-0.5 text-[#ff9800] mt-1.5 pointer-events-none">
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+                    @endforeach
+                @endfor
             </div>
-
-            <!-- Pagination Pill Indicators -->
-            <div class="flex items-center justify-center gap-2 mt-6">
-                <button type="button" aria-label="Go to Slide 1" class="testimonial-dot active h-2 rounded-full cursor-pointer" onclick="goToTestimonialSlide(0)"></button>
-                <button type="button" aria-label="Go to Slide 2" class="testimonial-dot h-2 rounded-full cursor-pointer" onclick="goToTestimonialSlide(1)"></button>
-            </div>
-
         </div>
 
     </div>
+
 </section>
-
-<!-- Testimonial Slider Script with Smooth Mouse Drag & Touch Swipe -->
-<script>
-    (function() {
-        const track = document.getElementById('testimonialTrack');
-        const sliderWrapper = document.getElementById('testimonialSliderWrapper');
-        const dots = document.querySelectorAll('.testimonial-dot');
-        let currentTestimonialSlide = 0;
-        const totalTestimonialSlides = 2;
-
-        let isDown = false;
-        let startX = 0;
-        let diffX = 0;
-        let autoSlideTimer = null;
-
-        function updateSlide(index, animate = true) {
-            currentTestimonialSlide = Math.max(0, Math.min(index, totalTestimonialSlides - 1));
-            if (track) {
-                track.style.transition = animate ? 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
-                track.style.transform = `translateX(-${currentTestimonialSlide * 100}%)`;
-            }
-
-            dots.forEach((dot, idx) => {
-                if (idx === currentTestimonialSlide) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        window.goToTestimonialSlide = function(index) {
-            updateSlide(index, true);
-            resetAutoTimer();
-        };
-
-        function startDrag(e) {
-            isDown = true;
-            startX = (e.pageX !== undefined) ? e.pageX : (e.touches && e.touches[0].pageX);
-            diffX = 0;
-            if (track) {
-                track.style.transition = 'none';
-            }
-            if (sliderWrapper) {
-                sliderWrapper.classList.add('cursor-grabbing');
-                sliderWrapper.classList.remove('cursor-grab');
-            }
-            clearInterval(autoSlideTimer);
-        }
-
-        function onDrag(e) {
-            if (!isDown) return;
-            const currentX = (e.pageX !== undefined) ? e.pageX : (e.touches && e.touches[0].pageX);
-            diffX = currentX - startX;
-
-            const width = sliderWrapper ? sliderWrapper.offsetWidth : 1;
-            const percentDiff = (diffX / width) * 100;
-            const currentPercent = -(currentTestimonialSlide * 100) + percentDiff;
-            
-            if (track) {
-                track.style.transform = `translateX(${currentPercent}%)`;
-            }
-        }
-
-        function endDrag() {
-            if (!isDown) return;
-            isDown = false;
-            if (sliderWrapper) {
-                sliderWrapper.classList.remove('cursor-grabbing');
-                sliderWrapper.classList.add('cursor-grab');
-            }
-
-            const threshold = 40; // 40px drag threshold to change slide
-            if (diffX < -threshold) {
-                // Swipe Left -> loop to next slide (e.g. 0 -> 1 -> 0)
-                currentTestimonialSlide = (currentTestimonialSlide + 1) % totalTestimonialSlides;
-            } else if (diffX > threshold) {
-                // Swipe Right -> loop to prev slide (e.g. 1 -> 0 -> 1)
-                currentTestimonialSlide = (currentTestimonialSlide - 1 + totalTestimonialSlides) % totalTestimonialSlides;
-            }
-            updateSlide(currentTestimonialSlide, true);
-            resetAutoTimer();
-        }
-
-        if (sliderWrapper) {
-            // Mouse Drag Listeners
-            sliderWrapper.addEventListener('mousedown', (e) => {
-                startDrag(e);
-            });
-            window.addEventListener('mousemove', (e) => {
-                onDrag(e);
-            });
-            window.addEventListener('mouseup', () => {
-                endDrag();
-            });
-
-            // Touch Swipe Listeners
-            sliderWrapper.addEventListener('touchstart', (e) => {
-                startDrag(e);
-            }, { passive: true });
-            window.addEventListener('touchmove', (e) => {
-                onDrag(e);
-            }, { passive: true });
-            window.addEventListener('touchend', () => {
-                endDrag();
-            });
-
-            // Pause on hover
-            sliderWrapper.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideTimer);
-            });
-            sliderWrapper.addEventListener('mouseleave', () => {
-                if (!isDown) resetAutoTimer();
-            });
-        }
-
-        function resetAutoTimer() {
-            clearInterval(autoSlideTimer);
-            autoSlideTimer = setInterval(() => {
-                currentTestimonialSlide = (currentTestimonialSlide + 1) % totalTestimonialSlides;
-                updateSlide(currentTestimonialSlide, true);
-            }, 7500);
-        }
-
-        resetAutoTimer();
-    })();
-</script>

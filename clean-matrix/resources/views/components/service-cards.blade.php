@@ -30,16 +30,20 @@
 <!-- ============================================== -->
 <!-- CORE SERVICE CARDS SECTION                     -->
 <!-- ============================================== -->
-<section id="services" class="relative bg-neutral-light/50 py-20 sm:py-28 overflow-hidden border-t border-neutral-border/50">
+<section id="services" class="relative bg-white py-16 sm:py-24 overflow-hidden border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header (Clean H2 without badge, mentioning services clearly) -->
-        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-4">
-            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-secondary">
-                Cleaning & Pest Control Services
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-2">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                OUR SERVICES
+            </p>
+
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-[#0F172A]">
+                Cleaning &amp; Pest Control Services
             </h2>
 
-            <p class="font-body text-base text-neutral-text font-light leading-relaxed">
+            <p class="font-body text-sm sm:text-base text-slate-600 font-light leading-relaxed max-w-2xl mx-auto pt-1">
                 Discover our specialized residential, commercial, and pest management services delivered by verified, trained professionals.
             </p>
         </div>

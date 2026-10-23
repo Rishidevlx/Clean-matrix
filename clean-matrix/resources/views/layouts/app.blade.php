@@ -9,10 +9,10 @@
     <!-- Favicon using logo-mark.png -->
     <link rel="icon" type="image/png" href="{{ asset('logo-mark.png') }}">
     
-    <!-- Google Fonts: Montserrat (Headings) & Poppins (Content) -->
+    <!-- Google Fonts: Lexend (Headings & Body Content) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS (CDN configured with brand tokens) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,14 +32,15 @@
                             sub: '#1A2C5D',
                         },
                         neutral: {
-                            text: '#4C4C4E',
+                            text: '#666666',
                             border: '#DBDCDE',
                             light: '#F8FAF9'
                         }
                     },
                     fontFamily: {
-                        heading: ['Montserrat', 'sans-serif'],
-                        body: ['Poppins', 'sans-serif'],
+                        heading: ['Lexend', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        body: ['Lexend', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        sans: ['Lexend', 'ui-sans-serif', 'system-ui', 'sans-serif'],
                     }
                 }
             }
@@ -51,12 +52,14 @@
 
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            color: #4C4C4E;
+            font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;
+            color: #666666;
             background-color: #FFFFFF;
+            font-weight: 400;
         }
         h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;
+            letter-spacing: -0.015em;
         }
     </style>
     @stack('styles')
@@ -84,12 +87,19 @@
         </span>
 
         <!-- Simple WhatsApp Icon (Default Clean Circle, No Blink Animation) -->
-        <div class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shrink-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
             <img src="{{ asset('images/whatsapp-icon.svg') }}" alt="WhatsApp" class="w-full h-full object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-300">
         </div>
     </a>
 
-    <!-- Reusable Footer Partial (Exact Clenix Layout) -->
+    <!-- ======================================================== -->
+    <!-- COMPULSORY GLOBAL SECTIONS (All Pages)                   -->
+    <!-- 1. OUR TESTIMONIALS SECTION                              -->
+    <!-- 2. FAQ'S SECTION                                         -->
+    <!-- 3. QUICK LINKS & 4. MAIN FOOTER                          -->
+    <!-- ======================================================== -->
+    @include('components.testimonials')
+    @include('components.faq')
     @include('partials.footer')
 
     <!-- Global Lucide Icon Initialization & Page Scripts -->

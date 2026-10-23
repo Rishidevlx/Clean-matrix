@@ -44,16 +44,21 @@
     }
 </style>
 
-<section id="how-it-works" class="relative py-20 sm:py-28 bg-[#f4f7fc]">
+<section id="how-it-works" class="relative py-20 sm:py-28 bg-white border-t border-slate-100">
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
 
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-24 space-y-3">
-            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-secondary">
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-24 space-y-2">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                HOW IT WORKS
+            </p>
+
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-[#0F172A]">
                 Our Working Process
             </h2>
-            <p class="font-body text-sm sm:text-base text-neutral-text font-light leading-relaxed max-w-2xl mx-auto">
+            
+            <p class="font-body text-sm sm:text-base text-slate-600 font-light leading-relaxed max-w-2xl mx-auto pt-1">
                 Simple, transparent, and hassle-free — experience seamless booking from first enquiry to supervisor-inspected sparkling results.
             </p>
         </div>

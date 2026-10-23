@@ -24,12 +24,17 @@
 <section id="packages" class="relative py-20 sm:py-24 bg-white overflow-hidden border-t border-neutral-border/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <!-- Section Heading (Title & Short Subtitle) -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-2.5">
-            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-secondary">
-                Packages & Smart Combo Offers
+        <!-- Section Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-2">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+                PLANS &amp; PRICING
+            </p>
+
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-[#0F172A]">
+                Packages &amp; Smart Combo Offers
             </h2>
-            <p class="font-body text-sm sm:text-base text-neutral-text font-light leading-relaxed max-w-2xl mx-auto">
+            
+            <p class="font-body text-sm sm:text-base text-slate-600 font-light leading-relaxed max-w-2xl mx-auto pt-1">
                 Transparent monthly plans with mechanized German scrubbing, certified eco-friendly chemicals, and free home care kits.
             </p>
         </div>
@@ -260,19 +265,6 @@
 
         </div>
 
-    </div>
-
-    <!-- Scalloped Half-Circle Wave Divider (Exact Match to Hero Banner Divider, Seamless Transition into How It Works) -->
-    <div class="absolute -bottom-1 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
-        <svg class="relative block w-full h-7 sm:h-9" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <defs>
-                <pattern id="scallopWavePackagesToProcess" width="48" height="60" patternUnits="userSpaceOnUse">
-                    <!-- Semicircle arch pointing UP into packages section (0 to 16), solid #f4f7fc below (16 to 60) -->
-                    <path d="M 0 16 C 12 0, 36 0, 48 16 L 48 60 L 0 60 Z" fill="#f4f7fc"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#scallopWavePackagesToProcess)"/>
-        </svg>
     </div>
 
 </section>

@@ -3,8 +3,8 @@
 @section('title', 'Clean Matrix — Clean Smarter. Live Better.')
 
 @section('content')
-    <!-- Hero Slider Component -->
-    @include('components.hero-slider')
+    <!-- Pronto-Style Clean Minimal Hero Section -->
+    @include('components.hero-section')
 
     <!-- Home About / Intro Section with Scallop Wave Divider -->
     @include('components.home-about-intro')
@@ -20,10 +20,4 @@
 
     <!-- How It Works / Working Process Section (Exact Clenix Curved Flow) -->
     @include('components.how-it-works')
-
-    <!-- Verified Client Reviews / Testimonials Section (Exact Clenix Testimonial 2) -->
-    @include('components.testimonials')
-
-    <!-- Frequently Asked Questions & Inquiry Section (Exact Clenix FAQ Layout) -->
-    @include('components.faq')
 @endsection

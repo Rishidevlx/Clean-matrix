@@ -2,11 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceController;
 
 // Home Page
 Route::get('/', function () {
     return view('pages.home');
 })->name('home');
+
+// Services Pages (Master Dynamic Controller)
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
 
 // About Page
 Route::get('/about', function () {
@@ -17,10 +22,16 @@ Route::get('/about-clean-matrix', function () {
     return redirect()->route('about');
 });
 
-// Packages Page
-Route::get('/packages', function () {
-    return view('pages.packages');
-})->name('packages');
+use App\Http\Controllers\PackageController;
+
+// Packages Pages (Master Dynamic Controller - /packages redirects to sub-menu)
+Route::get('/packages', [PackageController::class, 'index'])->name('packages');
+Route::get('/packages/{slug}', [PackageController::class, 'show'])->name('packages.show');
+
+// Projects & Case Studies Page
+Route::get('/projects', function () {
+    return view('pages.projects');
+})->name('projects');
 
 // Contact Page & Quote Submission
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
