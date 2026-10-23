@@ -99,7 +99,7 @@
                             <ul class="space-y-3.5 text-neutral-text text-[15px] font-body font-light text-left w-max mx-auto">
                                 @foreach($tier['features'] as $feature)
                                     <li class="flex items-center gap-3">
-                                        <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.5] shrink-0"></i>
+                                        <i data-lucide="check" class="w-4 h-4 text-[#287ff9] stroke-[2.2] shrink-0"></i>
                                         <span class="text-slate-700">{{ $feature }}</span>
                                     </li>
                                 @endforeach
@@ -110,7 +110,7 @@
                     <div>
                         <!-- Price Box -->
                         <div class="mb-7">
-                            <div class="font-heading text-4xl sm:text-5xl font-bold text-[#0F172A] leading-tight mb-1">
+                            <div class="font-heading text-4xl sm:text-5xl font-semibold text-[#287ff9] leading-tight mb-1">
                                 {{ $tier['price'] }}
                             </div>
                             <div class="text-[13px] text-neutral-text/75 font-body font-light tracking-wide">
@@ -119,10 +119,11 @@
                         </div>
 
                         <!-- Action Button -->
-                        <div>
+                        <div class="flex justify-center">
                             <a href="{{ route('contact') }}" 
-                               class="inline-block w-full py-3.5 px-6 rounded-[4px] font-heading text-sm font-semibold transition-all duration-300 tracking-wide {{ !empty($tier['is_popular']) ? 'bg-[#81BA41] text-white hover:bg-[#72aa38] shadow-md hover:shadow-lg' : 'bg-white border-2 border-[#81BA41] text-[#81BA41] hover:bg-[#81BA41] hover:text-white' }}">
-                                {{ $tier['btn_text'] ?? 'Get Started' }}
+                               class="inline-flex items-center justify-center gap-2 bg-[#287ff9] hover:bg-[#1b6de5] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 w-full group/btn">
+                                <span>{{ $tier['btn_text'] ?? 'Choose Plan' }}</span>
+                                <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover/btn:translate-x-1"></i>
                             </a>
                         </div>
                     </div>

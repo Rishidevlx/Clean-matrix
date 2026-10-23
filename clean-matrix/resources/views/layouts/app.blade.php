@@ -93,13 +93,15 @@
     </a>
 
     <!-- ======================================================== -->
-    <!-- COMPULSORY GLOBAL SECTIONS (All Pages)                   -->
+    <!-- GLOBAL SECTIONS                                          -->
     <!-- 1. OUR TESTIMONIALS SECTION                              -->
-    <!-- 2. FAQ'S SECTION                                         -->
+    <!-- 2. FAQ'S SECTION (Except Terms & Conditions & Privacy)   -->
     <!-- 3. QUICK LINKS & 4. MAIN FOOTER                          -->
     <!-- ======================================================== -->
-    @include('components.testimonials')
-    @include('components.faq')
+    @unless(request()->routeIs('privacy', 'terms'))
+        @include('components.testimonials')
+        @include('components.faq')
+    @endunless
     @include('partials.footer')
 
     <!-- Global Lucide Icon Initialization & Page Scripts -->

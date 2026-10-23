@@ -100,7 +100,7 @@
 
                     <!-- Action Button -->
                     <div class="flex justify-center">
-                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-primary-hover w-48 sm:w-52">
+                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#287ff9] hover:bg-[#1b6de5] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#1b6de5] w-48 sm:w-52">
                             <span>Book Now</span>
                             <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"></i>
                         </a>
@@ -183,7 +183,7 @@
 
                     <!-- Action Button -->
                     <div class="flex justify-center">
-                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-primary-hover w-48 sm:w-52">
+                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#287ff9] hover:bg-[#1b6de5] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#1b6de5] w-48 sm:w-52">
                             <span>Book Now</span>
                             <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"></i>
                         </a>
@@ -254,7 +254,7 @@
 
                     <!-- Action Button -->
                     <div class="flex justify-center">
-                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-primary-hover w-48 sm:w-52">
+                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#287ff9] hover:bg-[#1b6de5] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#1b6de5] w-48 sm:w-52">
                             <span>Book Now</span>
                             <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"></i>
                         </a>
