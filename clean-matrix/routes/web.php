@@ -33,9 +33,9 @@ Route::get('/projects', function () {
     return view('pages.projects');
 })->name('projects');
 
-// Contact Page & Quote Submission
+// Contact Page & Quote Submission (with Rate Limiting: 10 requests per minute)
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('/contact', [ContactController::class, 'submit'])->middleware('throttle:10,1')->name('contact.submit');
 
 // Legal Pages: Privacy Policy & Terms of Service
 Route::get('/privacy-policy', function () {

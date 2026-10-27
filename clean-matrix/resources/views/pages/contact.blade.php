@@ -141,6 +141,15 @@
                         </h2>
                     </div>
 
+                    <!-- ERROR STATE BOX -->
+                    <div id="contactErrorState" class="hidden border border-red-200 p-4 text-xs sm:text-sm text-red-700 font-normal text-left rounded-xl bg-red-50/70 leading-relaxed mb-4 space-y-1">
+                        <div class="flex items-center gap-2 text-red-600 font-bold font-heading">
+                            <i data-lucide="alert-circle" class="w-4 h-4"></i>
+                            <span id="contactErrorTitle">Please check your inputs</span>
+                        </div>
+                        <p id="contactErrorMessage"></p>
+                    </div>
+
                     <!-- SUCCESS STATE BOX -->
                     <div id="contactSuccessState" class="hidden border border-emerald-200 p-6 text-sm text-slate-700 font-normal text-left rounded-xl bg-emerald-50/50 leading-relaxed animate-fade-in space-y-2">
                         <div class="flex items-center gap-2 text-emerald-600 font-bold font-heading">
@@ -154,48 +163,80 @@
                     <form id="contactFormContainer" onsubmit="handleContactPageSubmit(event)" class="space-y-4 font-body">
                         @csrf
 
-                        <!-- 1. Name* Field -->
+                        <!-- Anti-Spam Bot Honeypot (Invisible to humans, triggers silent drop for bots) -->
+                        <div style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+                            <input type="text" name="b_address" tabindex="-1" autocomplete="off" value="">
+                        </div>
+
+                        <!-- 1. Name* Field (Max 50 chars) -->
                         <div>
                             <input type="text" 
                                    name="name" 
+                                   id="inputName"
                                    required 
+                                   maxlength="50"
                                    placeholder="Your Name*" 
+                                   oninput="validateNameInput(this)"
                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
+                            <p id="nameInputError" class="hidden text-xs text-red-500 mt-1 pl-1 font-medium"></p>
                         </div>
 
-                        <!-- 2. Email Address* Field -->
+                        <!-- 2. Email Address* Field (Max 35 chars) -->
                         <div>
                             <input type="email" 
                                    name="email" 
+                                   id="inputEmail"
                                    required 
+                                   maxlength="35"
                                    placeholder="Email Address*" 
+                                   oninput="validateEmailInput(this)"
                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
+                            <p id="emailInputError" class="hidden text-xs text-red-500 mt-1 pl-1 font-medium"></p>
                         </div>
 
-                        <!-- 3. Phone* Field -->
+                        <!-- 3. Phone* Field (Only numbers 0-9, max 10 digits) -->
                         <div>
                             <input type="tel" 
                                    name="phone" 
+                                   id="inputPhone"
                                    required 
-                                   placeholder="Phone Number*" 
+                                   maxlength="10"
+                                   inputmode="numeric"
+                                   placeholder="Phone Number* (10 digits)" 
+                                   onkeypress="return isOnlyNumberKey(event)"
+                                   oninput="validatePhoneInput(this)"
                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
+                            <div class="flex justify-between items-center text-xs mt-1 pl-1">
+                                <p id="phoneInputError" class="hidden text-red-500 font-medium"></p>
+                                <span id="phoneDigitCounter" class="text-slate-400 ml-auto hidden font-mono">0/10</span>
+                            </div>
                         </div>
 
-                        <!-- 4. Subject* Field -->
+                        <!-- 4. Subject* / Service Field (Max 50 chars) -->
                         <div>
                             <input type="text" 
                                    name="subject" 
+                                   id="inputSubject"
                                    required 
+                                   maxlength="50"
                                    placeholder="Property Type or Service Required*" 
                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors">
                         </div>
 
-                        <!-- 5. Message Field -->
+                        <!-- 5. Message Field* (Max 300 chars) -->
                         <div>
                             <textarea name="message" 
+                                      id="inputMessage"
                                       rows="4" 
-                                      placeholder="Describe your requirements (e.g. 3BHK deep cleaning, office sanitization...)" 
+                                      required
+                                      maxlength="300"
+                                      oninput="validateMessageInput(this)"
+                                      placeholder="Describe your requirements* (e.g. 3BHK deep cleaning, office sanitization...)" 
                                       class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-colors resize-none"></textarea>
+                            <div class="flex justify-between items-center text-xs mt-1 pl-1 text-slate-400">
+                                <span id="messageInputError" class="text-red-500 font-medium hidden">Minimum 5 characters required</span>
+                                <span id="messageCharCount" class="ml-auto font-mono">0 / 300</span>
+                            </div>
                         </div>
 
                         <!-- Submit Button in Theme Green -->
@@ -226,15 +267,141 @@
     </div>
 </section>
 
-<!-- Contact Form AJAX Submission with Spinner Loader -->
+<!-- Real-Time Client-Side Validation & AJAX Submission Scripts -->
 <script>
+    // 1. Block any non-numeric key in phone field on keypress
+    function isOnlyNumberKey(evt) {
+        const charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            evt.preventDefault();
+            return false;
+        }
+        return true;
+    }
+
+    // 2. Real-time Phone validation (digits only, Indian starting 6-9, max 10 digits)
+    function validatePhoneInput(input) {
+        input.value = input.value.replace(/[^0-9]/g, '').slice(0, 10);
+        
+        const errorEl = document.getElementById('phoneInputError');
+        const counterEl = document.getElementById('phoneDigitCounter');
+        const val = input.value;
+        
+        counterEl.classList.remove('hidden');
+        counterEl.textContent = val.length + '/10';
+
+        if (val.length === 0) {
+            errorEl.classList.add('hidden');
+            counterEl.classList.add('hidden');
+            input.classList.remove('border-red-400', 'border-emerald-400');
+            return;
+        }
+
+        if (!/^[6-9]/.test(val)) {
+            errorEl.textContent = 'Must start with 6, 7, 8, or 9';
+            errorEl.classList.remove('hidden');
+            input.classList.add('border-red-400');
+            input.classList.remove('border-emerald-400');
+        } else if (val.length < 10) {
+            errorEl.textContent = 'Must be 10 digits';
+            errorEl.classList.remove('hidden');
+            input.classList.add('border-red-400');
+            input.classList.remove('border-emerald-400');
+        } else {
+            errorEl.classList.add('hidden');
+            input.classList.remove('border-red-400');
+            input.classList.add('border-emerald-400');
+        }
+    }
+
+    // 3. Real-time Name validation (letters and spaces only, max 50)
+    function validateNameInput(input) {
+        input.value = input.value.replace(/[^a-zA-Z\s\-]/g, '').slice(0, 50);
+        
+        const errorEl = document.getElementById('nameInputError');
+        const val = input.value.trim();
+
+        if (val.length === 0) {
+            errorEl.classList.add('hidden');
+            input.classList.remove('border-red-400', 'border-emerald-400');
+            return;
+        }
+
+        if (val.length < 3) {
+            errorEl.textContent = 'Name must be at least 3 letters';
+            errorEl.classList.remove('hidden');
+            input.classList.add('border-red-400');
+            input.classList.remove('border-emerald-400');
+        } else {
+            errorEl.classList.add('hidden');
+            input.classList.remove('border-red-400');
+            input.classList.add('border-emerald-400');
+        }
+    }
+
+    // 4. Real-time Email validation (syntax format, max 35)
+    function validateEmailInput(input) {
+        input.value = input.value.slice(0, 35);
+        const errorEl = document.getElementById('emailInputError');
+        const val = input.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (val.length === 0) {
+            errorEl.classList.add('hidden');
+            input.classList.remove('border-red-400', 'border-emerald-400');
+            return;
+        }
+
+        if (!emailRegex.test(val)) {
+            errorEl.textContent = 'Please enter a valid email (e.g. name@example.com)';
+            errorEl.classList.remove('hidden');
+            input.classList.add('border-red-400');
+            input.classList.remove('border-emerald-400');
+        } else {
+            errorEl.classList.add('hidden');
+            input.classList.remove('border-red-400');
+            input.classList.add('border-emerald-400');
+        }
+    }
+
+    // 5. Real-time Message character counter & minimum requirement (max 300)
+    function validateMessageInput(textarea) {
+        textarea.value = textarea.value.slice(0, 300);
+        const charCountEl = document.getElementById('messageCharCount');
+        const errorEl = document.getElementById('messageInputError');
+        const length = textarea.value.length;
+        
+        charCountEl.textContent = length + ' / 300';
+
+        if (length === 0) {
+            errorEl.classList.add('hidden');
+            textarea.classList.remove('border-red-400', 'border-emerald-400');
+            return;
+        }
+
+        if (length < 5) {
+            errorEl.classList.remove('hidden');
+            textarea.classList.add('border-red-400');
+            textarea.classList.remove('border-emerald-400');
+        } else {
+            errorEl.classList.add('hidden');
+            textarea.classList.remove('border-red-400');
+            textarea.classList.add('border-emerald-400');
+        }
+    }
+
+    // 6. Handle Form Submission
     function handleContactPageSubmit(event) {
         event.preventDefault();
         const form = document.getElementById('contactFormContainer');
         const btn = document.getElementById('contactPageSubmitBtn');
         const loader = document.getElementById('contactFormLoader');
         const successBox = document.getElementById('contactSuccessState');
+        const errorBox = document.getElementById('contactErrorState');
+        const errorMessage = document.getElementById('contactErrorMessage');
         
+        // Reset states
+        errorBox.classList.add('hidden');
         btn.disabled = true;
         btn.classList.add('opacity-75');
         loader.classList.remove('hidden');
@@ -245,11 +412,23 @@
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
+                "Accept": "application/json",
                 "X-CSRF-TOKEN": "{{ csrf_token() }}"
             },
             body: formData
         })
-        .then(response => response.json())
+        .then(async response => {
+            const data = await response.json();
+            if (!response.ok) {
+                let msg = data.message || 'Something went wrong. Please check your inputs.';
+                if (data.errors) {
+                    const firstErr = Object.values(data.errors).flat()[0];
+                    if (firstErr) msg = firstErr;
+                }
+                throw new Error(msg);
+            }
+            return data;
+        })
         .then(data => {
             loader.classList.add('hidden');
             form.classList.add('hidden');
@@ -258,8 +437,10 @@
         })
         .catch(err => {
             loader.classList.add('hidden');
-            form.classList.add('hidden');
-            successBox.classList.remove('hidden');
+            btn.disabled = false;
+            btn.classList.remove('opacity-75');
+            errorMessage.textContent = err.message || 'Unable to send message right now. Please call us directly.';
+            errorBox.classList.remove('hidden');
             if (window.lucide) { window.lucide.createIcons(); }
         });
     }
