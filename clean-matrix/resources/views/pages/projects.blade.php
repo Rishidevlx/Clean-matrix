@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Projects & Completed Cleaning Assignments | Clean Matrix Coimbatore')
-@section('meta_description', 'Explore verified cleaning transformations, Before & After evidence, and our 4-step mechanized execution workflow completed across Coimbatore by Clean Matrix.')
+@section('title', 'Cleaning Projects | Clean Matrix')
+@section('meta_description', 'Explore real Clean Matrix cleaning projects and learn about the service scope and approach used.')
+@section('meta_keywords', 'cleaning projects coimbatore, cleaning case studies, marble polishing before after, floor scrubbing results, post renovation cleaning, deep cleaning evidence')
+@section('canonical', route('projects'))
 
 @section('content')
 

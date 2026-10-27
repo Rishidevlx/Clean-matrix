@@ -2,6 +2,8 @@
 
 @section('title', 'Terms & Conditions | Clean Matrix')
 @section('meta_description', 'Read the Clean Matrix Terms and Conditions covering service bookings, mechanized cleaning scope, cancellation guidelines, and our 24-hour quality guarantee.')
+@section('meta_keywords', 'terms and conditions clean matrix, cleaning service terms, cancellation policy, 24-hour guarantee coimbatore')
+@section('canonical', route('terms'))
 
 @section('content')
 

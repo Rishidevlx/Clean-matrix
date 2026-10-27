@@ -2,6 +2,8 @@
 
 @section('title', '404 - Page Not Found | Clean Matrix')
 @section('meta_description', 'The page you are looking for is not available or has been removed. Return to Clean Matrix homepage.')
+@section('meta_robots', 'noindex, nofollow')
+@section('hide_global_sections', true)
 
 @section('content')
 
@@ -42,10 +44,10 @@
                 The page you are looking is not available or has been removed. Try going to Home Page by using the button below.
             </p>
 
-            <!-- Clenix Action Button (#00448B with hover effect) -->
+            <!-- Clenix Action Button (White with clean hover effect) -->
             <a 
                 href="{{ route('home') }}" 
-                class="inline-flex items-center justify-center bg-[#00448B] hover:bg-[#00366f] active:scale-95 text-white font-heading text-xs sm:text-sm font-bold tracking-wider uppercase px-7 sm:px-9 py-2.5 sm:py-3 rounded-[4px] shadow-lg shadow-blue-900/30 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
+                class="inline-flex items-center justify-center bg-white hover:bg-slate-100 active:scale-95 text-[#00448B] font-heading text-xs sm:text-sm font-bold tracking-wider uppercase px-7 sm:px-9 py-2.5 sm:py-3 rounded-[4px] shadow-lg shadow-black/20 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
             >
                 GO HOME PAGE
             </a>

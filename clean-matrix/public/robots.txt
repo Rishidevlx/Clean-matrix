@@ -1,2 +1,9 @@
+# Clean Matrix - Robots Directive (https://cleanmatrix.in)
 User-agent: *
-Disallow:
+Allow: /
+
+# Exclude error preview routes
+Disallow: /404
+
+# XML Sitemap Location
+Sitemap: https://cleanmatrix.in/sitemap.xml

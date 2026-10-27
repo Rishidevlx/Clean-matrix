@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Clean Matrix | Request a Cleaning Quote')
-@section('meta_description', 'Contact Clean Matrix for residential housekeeping, deep cleaning or pest control in Coimbatore. Call +91 95004 75798 or send an inquiry.')
+@section('meta_description', 'Contact Clean Matrix about housekeeping, deep cleaning or pest control. Call or send your requirements to request a quotation.')
+@section('meta_keywords', 'contact clean matrix, request cleaning quote coimbatore, cleaning services phone number, cleaning enquiry, book cleaning service, emergency pest control')
+@section('canonical', route('contact'))
 
 @section('content')
 

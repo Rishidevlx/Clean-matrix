@@ -2,6 +2,8 @@
 
 @section('title', $package['meta_title'] ?? ($package['name'] . ' Packages | Clean Matrix'))
 @section('meta_description', $package['meta_desc'] ?? ($package['name'] . ' packages in Coimbatore by Clean Matrix'))
+@section('meta_keywords', ($package['name'] . ' packages coimbatore, cleaning packages, 4-in-1 cleaning, 6-in-1 combo, cleaning cost coimbatore, SLA facility maintenance'))
+@section('canonical', route('packages.show', $package['slug']))
 
 @push('styles')
 <!-- Custom Styles for Clenix Packages & Pricing Cards -->

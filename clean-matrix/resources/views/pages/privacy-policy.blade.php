@@ -2,6 +2,8 @@
 
 @section('title', 'Privacy Policy | Clean Matrix')
 @section('meta_description', 'Read the Clean Matrix Privacy Policy to understand how we collect, protect, and handle your personal and property information with complete security.')
+@section('meta_keywords', 'privacy policy clean matrix, customer data protection, service security, coimbatore cleaning privacy')
+@section('canonical', route('privacy'))
 
 @section('content')
 

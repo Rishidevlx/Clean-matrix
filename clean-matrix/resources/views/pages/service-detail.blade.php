@@ -2,6 +2,8 @@
 
 @section('title', $service['meta_title'] ?? ($service['name'] . ' | Clean Matrix'))
 @section('meta_description', $service['meta_desc'] ?? ($service['name'] . ' in Coimbatore by Clean Matrix'))
+@section('meta_keywords', ($service['name'] . ' coimbatore, ' . strtolower($service['name']) . ', mechanized cleaning coimbatore, Taski eco chemicals, Diversey formulations'))
+@section('canonical', route('services.show', $service['slug']))
 
 @push('styles')
 <!-- Styles for Clenix Signature Slanted Process Cards (Exact Home Page Match) -->

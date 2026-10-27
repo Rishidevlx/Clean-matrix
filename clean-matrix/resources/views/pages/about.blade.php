@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'About Clean Matrix | Professional Mechanized Cleaning')
-@section('meta_description', 'Learn about Clean Matrix, our mechanized cleaning and pest control services, service philosophy, and client transformations across Coimbatore.')
+@section('title', 'About Clean Matrix | Cleaning Service Team')
+@section('meta_description', 'Learn about Clean Matrix, its cleaning and pest control services, service approach and the customers it supports.')
+@section('meta_keywords', 'about clean matrix, cleaning company coimbatore, verified cleaning crew, mechanized cleaning standards, Diversey Taski chemicals, facility care')
+@section('canonical', route('about'))
 
 @section('content')
 

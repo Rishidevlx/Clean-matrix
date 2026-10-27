@@ -3,8 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Clean Matrix — Clean Smarter. Live Better.')</title>
-    <meta name="description" content="@yield('meta_description', 'Clean Matrix — Professional Mechanized Deep Cleaning, Sanitization, Housekeeping and Pest Control Services for Homes and Businesses in Chennai.')">
+    <title>@yield('title', 'Cleaning & Pest Control Services | Clean Matrix')</title>
+    <meta name="description" content="@yield('meta_description', 'Explore Clean Matrix housekeeping, deep cleaning and pest control services for homes and businesses across Coimbatore. Contact us to discuss options and request a quote.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'cleaning services coimbatore, housekeeping services, deep cleaning coimbatore, pest control coimbatore, mechanized floor scrubbing, divergent chemicals, commercial cleaning SLA')">
+    <meta name="robots" content="@yield('meta_robots', 'index, follow')">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+    <meta name="author" content="Clean Matrix">
+
+    <!-- Open Graph / Facebook / WhatsApp Preview -->
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('title', 'Cleaning & Pest Control Services | Clean Matrix')">
+    <meta property="og:description" content="@yield('meta_description', 'Explore Clean Matrix housekeeping, deep cleaning and pest control services for homes and businesses across Coimbatore.')">
+    <meta property="og:url" content="@yield('canonical', url()->current())">
+    <meta property="og:site_name" content="Clean Matrix">
+    <meta property="og:image" content="{{ asset('logo-mark.png') }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', 'Cleaning & Pest Control Services | Clean Matrix')">
+    <meta name="twitter:description" content="@yield('meta_description', 'Explore Clean Matrix housekeeping, deep cleaning and pest control services for homes and businesses across Coimbatore.')">
+    <meta name="twitter:image" content="{{ asset('logo-mark.png') }}">
+
+    <!-- JSON-LD Structured Data (LocalBusiness, CleaningService & WebSite Schema - PDF Page 10) -->
+    @php
+        $siteSchema = [
+            '@context' => 'https://schema.org',
+            '@graph'   => [
+                [
+                    '@type'       => 'WebSite',
+                    '@id'         => url('/') . '#website',
+                    'url'         => url('/'),
+                    'name'        => 'Clean Matrix',
+                    'description' => 'Professional Mechanized Deep Cleaning, Sanitization, Housekeeping and Pest Control Services for Homes and Businesses in Coimbatore.',
+                    'publisher'   => [
+                        '@id' => url('/') . '#organization',
+                    ],
+                ],
+                [
+                    '@type'                      => ['CleaningService', 'LocalBusiness'],
+                    '@id'                        => url('/') . '#organization',
+                    'name'                       => 'Clean Matrix',
+                    'alternateName'              => 'Clean Matrix Facility Services',
+                    'url'                        => url('/'),
+                    'logo'                       => asset('logo-mark.png'),
+                    'image'                      => asset('images/hero-sections.png'),
+                    'telephone'                  => '+919566666199',
+                    'email'                      => 'info@cleanmatrix.in',
+                    'priceRange'                 => '₹₹',
+                    'currenciesAccepted'         => 'INR',
+                    'paymentAccepted'            => 'Cash, Credit Card, UPI, Bank Transfer',
+                    'address'                    => [
+                        '@type'           => 'PostalAddress',
+                        'streetAddress'   => 'No. 42, Avinashi Road, Peelamedu / RS Puram',
+                        'addressLocality' => 'Coimbatore',
+                        'addressRegion'   => 'Tamil Nadu',
+                        'postalCode'      => '641004',
+                        'addressCountry'  => 'IN',
+                    ],
+                    'geo'                        => [
+                        '@type'     => 'GeoCoordinates',
+                        'latitude'  => 11.0168,
+                        'longitude' => 76.9558,
+                    ],
+                    'openingHoursSpecification'  => [
+                        [
+                            '@type'     => 'OpeningHoursSpecification',
+                            'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                            'opens'     => '08:00',
+                            'closes'    => '20:00',
+                        ],
+                    ],
+                    'areaServed'                 => [
+                        ['@type' => 'AdministrativeArea', 'name' => 'Coimbatore'],
+                        ['@type' => 'Place', 'name' => 'RS Puram'],
+                        ['@type' => 'Place', 'name' => 'Gandhipuram'],
+                        ['@type' => 'Place', 'name' => 'Peelamedu'],
+                        ['@type' => 'Place', 'name' => 'Saravanampatti'],
+                        ['@type' => 'Place', 'name' => 'Race Course'],
+                        ['@type' => 'Place', 'name' => 'Saibaba Colony'],
+                        ['@type' => 'Place', 'name' => 'Vadavalli'],
+                        ['@type' => 'Place', 'name' => 'Ramanathapuram'],
+                        ['@type' => 'Place', 'name' => 'Singanallur'],
+                    ],
+                    'hasOfferCatalog'            => [
+                        '@type'           => 'OfferCatalog',
+                        'name'            => 'Clean Matrix Cleaning Services',
+                        'itemListElement' => [
+                            [
+                                '@type'       => 'Offer',
+                                'itemOffered' => [
+                                    '@type'       => 'Service',
+                                    'name'        => 'Housekeeping Services',
+                                    'description' => 'Routine upkeep and scheduled housekeeping for homes, villas, and workplaces in Coimbatore.',
+                                ],
+                            ],
+                            [
+                                '@type'       => 'Offer',
+                                'itemOffered' => [
+                                    '@type'       => 'Service',
+                                    'name'        => 'Deep Cleaning Services',
+                                    'description' => '360-degree intensive mechanized deep cleaning with single-disc German scrubbers and Taski formulations.',
+                                ],
+                            ],
+                            [
+                                '@type'       => 'Offer',
+                                'itemOffered' => [
+                                    '@type'       => 'Service',
+                                    'name'        => 'Pest Control Services',
+                                    'description' => 'Government-certified herbal gel baiting, anti-termite and odorless pest control.',
+                                ],
+                            ],
+                            [
+                                '@type'       => 'Offer',
+                                'itemOffered' => [
+                                    '@type'       => 'Service',
+                                    'name'        => 'Commercial Cleaning Services',
+                                    'description' => 'SLA-driven corporate housekeeping, IT park sanitization, and institutional cleaning.',
+                                ],
+                            ],
+                        ],
+                    ],
+                    'sameAs'                     => [
+                        'https://facebook.com',
+                        'https://instagram.com',
+                        'https://linkedin.com',
+                        'https://youtube.com',
+                    ],
+                ],
+            ],
+        ];
+    @endphp
+    <script type="application/ld+json">
+    {!! json_encode($siteSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
     
     <!-- Favicon using logo-mark.png -->
     <link rel="icon" type="image/png" href="{{ asset('logo-mark.png') }}">
@@ -95,10 +227,13 @@
     <!-- ======================================================== -->
     <!-- GLOBAL SECTIONS                                          -->
     <!-- 1. OUR TESTIMONIALS SECTION                              -->
-    <!-- 2. FAQ'S SECTION (Except Terms & Conditions & Privacy)   -->
+    <!-- 2. FAQ'S SECTION (Except Terms, Privacy & 404)           -->
     <!-- 3. QUICK LINKS & 4. MAIN FOOTER                          -->
     <!-- ======================================================== -->
-    @unless(request()->routeIs('privacy', 'terms'))
+    @php
+        $isNotFound = request()->routeIs('404') || (isset($exception) && method_exists($exception, 'getStatusCode') && $exception->getStatusCode() == 404);
+    @endphp
+    @unless(request()->routeIs('privacy', 'terms') || $isNotFound)
         @include('components.testimonials')
         @include('components.faq')
     @endunless
