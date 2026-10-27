@@ -64,7 +64,7 @@ class ContactController extends Controller
         Log::info('New Contact/Quote Enquiry received:', $validated);
 
         // Send Email Notification to Admin / Operations Team
-        $adminEmail = env('MAIL_TO_ADMIN', 'rishiaravindhaoff@gmail.com');
+        $adminEmail = config('mail.to_admin') ?: env('MAIL_TO_ADMIN', 'rishiaravindhaoff@gmail.com');
 
         try {
             Mail::to($adminEmail)->send(new NewContactLeadNotification($validated));
