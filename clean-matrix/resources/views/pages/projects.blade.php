@@ -90,7 +90,7 @@
                 </div>
 
                 <!-- Card 2: AFTER MECHANIZED SCRUB -->
-                <div class="bg-white rounded-2xl overflow-hidden border-2 border-[#81BA41] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group ring-4 ring-[#81BA41]/10">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group">
                     <div class="relative h-72 sm:h-80 overflow-hidden bg-slate-900">
                         <img src="{{ asset('images/projects/after.jpg') }}" alt="After Mechanized Restoration - Mirror Buffed Floor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/30"></div>
@@ -111,7 +111,7 @@
                     </div>
 
                     <!-- Delivered Improvements Body -->
-                    <div class="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between bg-emerald-50/20">
+                    <div class="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between bg-white">
                         <div class="space-y-2.5">
                             <p class="text-xs font-semibold text-emerald-700 uppercase tracking-wider font-heading">Delivered Restoration Scope:</p>
                             <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
@@ -129,7 +129,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="pt-4 border-t border-emerald-100 flex items-center justify-between text-xs text-slate-500">
+                        <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500">
                             <span class="font-semibold text-emerald-600 flex items-center gap-1"><i data-lucide="award" class="w-3.5 h-3.5"></i> 100% Client Sign-off</span>
                             <span class="text-emerald-700 font-medium">Hygiene Grade: A+ Certified</span>
                         </div>
@@ -146,99 +146,88 @@
 <!-- 3. LIVE NUMBERS / MILESTONE PROOF BAR                    -->
 <!-- 4-Column Stat Cards with Smooth Count-Up Animation       -->
 <!-- ======================================================== -->
-<section id="stats-section" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200/80 font-body relative overflow-hidden">
-    <!-- Subtle Background Accent Shapes -->
-    <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-emerald-100/50 blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-blue-100/50 blur-3xl pointer-events-none"></div>
-
+<section id="stats-section" class="py-16 sm:py-20 bg-white border-b border-slate-100 font-body relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Section Header -->
         <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14 space-y-1.5">
-            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-600 font-heading">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#81BA41] font-heading">
                 TRACK RECORD &amp; CREDIBILITY
             </p>
             <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight">
                 Numbers That Speak For Our Quality
             </h2>
-            <p class="text-xs sm:text-sm text-slate-600 font-normal">
+            <div class="w-12 h-0.5 bg-[#81BA41] mx-auto rounded-full my-2"></div>
+            <p class="text-xs sm:text-sm text-slate-500 font-normal">
                 Audited fieldwork and operational hygiene delivered across Coimbatore and surrounding regions.
             </p>
         </div>
 
-        <!-- 4-Column Stat Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Single Line Seamless Stat Bar (No Card Layout, Center Divider Lines, No Hover Effect) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
             
             <!-- Stat 1: 1,200+ Spaces -->
-            <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center justify-between group hover:-translate-y-1">
-                <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-[#81BA41] group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="sparkles" class="w-7 h-7"></i>
+            <div class="py-6 sm:py-4 px-4 sm:px-6 text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-[#81BA41] flex items-center justify-center mb-3">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
                 </div>
-                <div>
-                    <div class="font-heading text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-emerald-600 transition-colors">
-                        <span class="count-up" data-target="1200" data-suffix="+" data-comma="true">0</span>
-                    </div>
-                    <div class="font-heading text-sm font-bold text-slate-800 mb-1.5">
-                        Spaces Deep Cleaned
-                    </div>
-                    <p class="text-xs text-slate-500 font-light leading-relaxed">
-                        Villas, apartments, duplexes &amp; residential communities in Coimbatore.
-                    </p>
+                <div class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-1">
+                    <span class="count-up" data-target="1200" data-suffix="+" data-comma="true">0</span>
                 </div>
+                <div class="font-heading text-sm sm:text-base font-bold text-slate-800 mb-1">
+                    Spaces Deep Cleaned
+                </div>
+                <p class="text-xs text-slate-500 font-light leading-relaxed max-w-[220px]">
+                    Villas, apartments, duplexes &amp; residential communities in Coimbatore.
+                </p>
             </div>
 
             <!-- Stat 2: 85+ SLAs -->
-            <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center justify-between group hover:-translate-y-1">
-                <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#287ff9] flex items-center justify-center mb-4 group-hover:bg-[#287ff9] group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="building-2" class="w-7 h-7"></i>
+            <div class="py-6 sm:py-4 px-4 sm:px-6 text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#00448B] flex items-center justify-center mb-3">
+                    <i data-lucide="building-2" class="w-6 h-6"></i>
                 </div>
-                <div>
-                    <div class="font-heading text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#287ff9] transition-colors">
-                        <span class="count-up" data-target="85" data-suffix="+">0</span>
-                    </div>
-                    <div class="font-heading text-sm font-bold text-slate-800 mb-1.5">
-                        Institutional &amp; Corporate SLAs
-                    </div>
-                    <p class="text-xs text-slate-500 font-light leading-relaxed">
-                        Educational schools, university campuses &amp; IT facility contracts.
-                    </p>
+                <div class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-1">
+                    <span class="count-up" data-target="85" data-suffix="+">0</span>
                 </div>
+                <div class="font-heading text-sm sm:text-base font-bold text-slate-800 mb-1">
+                    Institutional &amp; Corporate SLAs
+                </div>
+                <p class="text-xs text-slate-500 font-light leading-relaxed max-w-[220px]">
+                    Educational schools, university campuses &amp; IT facility contracts.
+                </p>
             </div>
 
             <!-- Stat 3: 99.8% On-Time -->
-            <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center justify-between group hover:-translate-y-1">
-                <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-[#81BA41] group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="clock-check" class="w-7 h-7"></i>
+            <div class="py-6 sm:py-4 px-4 sm:px-6 text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-[#81BA41] flex items-center justify-center mb-3">
+                    <i data-lucide="clock-check" class="w-6 h-6"></i>
                 </div>
-                <div>
-                    <div class="font-heading text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-emerald-600 transition-colors">
-                        <span class="count-up" data-target="99.8" data-suffix="%" data-decimals="1">0</span>
-                    </div>
-                    <div class="font-heading text-sm font-bold text-slate-800 mb-1.5">
-                        On-Time Handover Rate
-                    </div>
-                    <p class="text-xs text-slate-500 font-light leading-relaxed">
-                        Punctual start and zero-delay completion aligned with client schedules.
-                    </p>
+                <div class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-1">
+                    <span class="count-up" data-target="99.8" data-suffix="%" data-decimals="1">0</span>
                 </div>
+                <div class="font-heading text-sm sm:text-base font-bold text-slate-800 mb-1">
+                    On-Time Handover Rate
+                </div>
+                <p class="text-xs text-slate-500 font-light leading-relaxed max-w-[220px]">
+                    Punctual start and zero-delay completion aligned with schedules.
+                </p>
             </div>
 
             <!-- Stat 4: 100% Verified -->
-            <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center justify-between group hover:-translate-y-1">
-                <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#287ff9] flex items-center justify-center mb-4 group-hover:bg-[#287ff9] group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+            <div class="py-6 sm:py-4 px-4 sm:px-6 text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#00448B] flex items-center justify-center mb-3">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
                 </div>
-                <div>
-                    <div class="font-heading text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#287ff9] transition-colors">
-                        <span class="count-up" data-target="100" data-suffix="%">0</span>
-                    </div>
-                    <div class="font-heading text-sm font-bold text-slate-800 mb-1.5">
-                        Police-Verified Crew
-                    </div>
-                    <p class="text-xs text-slate-500 font-light leading-relaxed">
-                        Background-audited, uniform-clad specialists with biometric logging.
-                    </p>
+                <div class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-1">
+                    <span class="count-up" data-target="100" data-suffix="%">0</span>
                 </div>
+                <div class="font-heading text-sm sm:text-base font-bold text-slate-800 mb-1">
+                    Police-Verified Crew
+                </div>
+                <p class="text-xs text-slate-500 font-light leading-relaxed max-w-[220px]">
+                    Background-audited specialists with biometric verification.
+                </p>
             </div>
 
         </div>
@@ -332,21 +321,21 @@
                             <!-- Vertical Bars in Brand Colors -->
                             <div class="flex items-end justify-center gap-2 pb-1">
                                 <div class="w-3.5 h-10 bg-[#81BA41] rounded-t-sm"></div>
-                                <div class="w-3.5 h-16 bg-[#287ff9] rounded-t-sm"></div>
+                                <div class="w-3.5 h-16 bg-[#00448B] rounded-t-sm"></div>
                                 <div class="w-3.5 h-7 bg-slate-200 rounded-t-sm"></div>
                                 <div class="w-3.5 h-14 bg-[#00448B] rounded-t-sm"></div>
                                 <div class="w-3.5 h-11 bg-[#81BA41] rounded-t-sm"></div>
                             </div>
 
                             <!-- Floating Top Right Shield Badge -->
-                            <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#287ff9] text-white flex items-center justify-center shadow-md border-2 border-white">
+                            <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#00448B] text-white flex items-center justify-center shadow-md border-2 border-white">
                                 <i data-lucide="shield" class="w-3 h-3"></i>
                             </div>
                         </div>
                     </div>
 
                     <!-- Step Title -->
-                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#0F172A] group-hover:text-[#287ff9] transition-colors mb-2 tracking-tight">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#0F172A] group-hover:text-[#00448B] transition-colors mb-2 tracking-tight">
                         Chemical &amp; Tech Plan
                     </h3>
 
@@ -366,13 +355,13 @@
                         <div class="w-40 h-28 bg-white rounded-2xl shadow-sm border border-slate-200/90 p-3.5 flex flex-col justify-between relative group-hover:-translate-y-2 group-hover:shadow-md transition-all duration-300">
                             <!-- Rotating Disc Visual -->
                             <div class="flex items-center justify-center py-1">
-                                <div class="w-10 h-10 rounded-full border-2 border-dashed border-[#287ff9] flex items-center justify-center bg-blue-50/50">
-                                    <i data-lucide="sparkles" class="w-5 h-5 text-[#287ff9]"></i>
+                                <div class="w-10 h-10 rounded-full border-2 border-dashed border-[#00448B] flex items-center justify-center bg-blue-50/50">
+                                    <i data-lucide="sparkles" class="w-5 h-5 text-[#00448B]"></i>
                                 </div>
                             </div>
 
                             <!-- Bottom Accent Button in Clenix Blue -->
-                            <div class="bg-[#287ff9] text-white py-1.5 px-3 rounded-lg text-[11px] font-heading font-semibold flex items-center justify-center gap-1.5 shadow-sm">
+                            <div class="bg-[#00448B] text-white py-1.5 px-3 rounded-lg text-[11px] font-heading font-semibold flex items-center justify-center gap-1.5 shadow-sm">
                                 <i data-lucide="zap" class="w-3.5 h-3.5 text-white"></i>
                                 <span>German Tech</span>
                             </div>
@@ -385,7 +374,7 @@
                     </div>
 
                     <!-- Step Title -->
-                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#0F172A] group-hover:text-[#287ff9] transition-colors mb-2 tracking-tight">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#0F172A] group-hover:text-[#00448B] transition-colors mb-2 tracking-tight">
                         Mechanized Execution
                     </h3>
 

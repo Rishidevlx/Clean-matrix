@@ -28,7 +28,7 @@
                 @endphp
                 @foreach($sitePages as $page)
                     <a href="{{ $page['url'] }}" class="inline-flex items-center gap-1.5 hover:text-primary transition-colors group">
-                        <span class="w-2 h-2 rounded-full bg-[#2563eb] group-hover:scale-125 transition-transform shrink-0"></span>
+                        <span class="w-2 h-2 rounded-full bg-[#00448B] group-hover:scale-125 transition-transform shrink-0"></span>
                         <span class="hover:underline">{{ $page['name'] }}</span>
                     </a>
                 @endforeach
@@ -57,7 +57,7 @@
                 @endphp
                 @foreach($packageLinks as $pkg)
                     <a href="{{ $pkg['url'] }}" class="inline-flex items-center gap-1.5 hover:text-primary transition-colors group">
-                        <span class="w-2 h-2 rounded-full bg-[#2563eb] group-hover:scale-125 transition-transform shrink-0"></span>
+                        <span class="w-2 h-2 rounded-full bg-[#00448B] group-hover:scale-125 transition-transform shrink-0"></span>
                         <span class="hover:underline">{{ $pkg['name'] }}</span>
                     </a>
                 @endforeach
@@ -80,7 +80,7 @@
                 @endphp
                 @foreach($locations as $loc)
                     <a href="{{ route('contact') }}?location={{ urlencode($loc) }}" class="inline-flex items-center gap-1.5 hover:text-primary transition-colors group" title="Book Cleaning in {{ $loc }}">
-                        <span class="w-2 h-2 rounded-full bg-[#2563eb] group-hover:scale-125 transition-transform shrink-0"></span>
+                        <span class="w-2 h-2 rounded-full bg-[#00448B] group-hover:scale-125 transition-transform shrink-0"></span>
                         <span class="hover:underline">{{ $loc }}</span>
                     </a>
                 @endforeach
@@ -93,7 +93,7 @@
 <!-- ======================================================== -->
 <!-- MAIN FOOTER: 5-COLUMN REFERENCE LAYOUT                   -->
 <!-- ======================================================== -->
-<footer class="bg-[#181c2e] text-white pt-16 sm:pt-20 pb-8 font-body relative overflow-hidden">
+<footer class="bg-[#1A2C5D] text-white pt-16 sm:pt-20 pb-8 font-body relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- 5-Column Grid -->
@@ -239,7 +239,7 @@
                     Address
                 </h4>
 
-                <div class="bg-white/5 rounded-xl border border-white/10 p-4 space-y-3">
+                <div class="bg-white/10 rounded-xl border border-white/15 p-4 space-y-3">
                     <div class="flex items-center gap-2 text-primary font-semibold text-xs sm:text-sm">
                         <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
                         <span>Coimbatore (HQ)</span>

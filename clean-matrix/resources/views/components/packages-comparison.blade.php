@@ -57,7 +57,7 @@
                 <div class="p-6 bg-slate-50 border-b border-slate-200/80 text-center">
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-200/80 text-neutral-text uppercase tracking-wider mb-2">Essential</span>
                     <h3 class="font-heading text-2xl font-medium text-secondary-sub mb-1">4-in-1 Essential</h3>
-                    <div class="text-3xl font-semibold text-[#287ff9] font-heading mb-3">₹2,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
+                    <div class="text-3xl font-semibold text-[#00448B] font-heading mb-3">₹2,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
                     <a href="{{ route('contact') }}" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-[4px] bg-primary hover:bg-primary-hover text-white font-heading text-xs font-semibold shadow-sm transition-all">
                         <span>Book 4-in-1 Plan</span>
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -97,7 +97,7 @@
             <div id="mobile-plan-comprehensive" class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border-2 border-primary/40 overflow-hidden relative">
                 <!-- Most Popular Sash (Blue Theme Match) -->
                 <div class="absolute top-0 right-0 w-24 h-24 overflow-hidden pointer-events-none z-20">
-                    <span class="absolute top-3.5 -right-7 w-28 py-0.5 bg-[#287ff9] text-white text-[9.5px] font-bold font-heading tracking-widest uppercase text-center rotate-45 shadow-sm">
+                    <span class="absolute top-3.5 -right-7 w-28 py-0.5 bg-[#00448B] text-white text-[9.5px] font-bold font-heading tracking-widest uppercase text-center rotate-45 shadow-sm">
                         POPULAR
                     </span>
                 </div>
@@ -106,7 +106,7 @@
                 <div class="p-6 bg-slate-50 border-b border-slate-200/80 text-center">
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-primary/15 text-primary-sub uppercase tracking-wider mb-2">Comprehensive</span>
                     <h3 class="font-heading text-2xl font-medium text-secondary-sub mb-1">6-in-1 Comprehensive</h3>
-                    <div class="text-3xl font-semibold text-[#287ff9] font-heading mb-3">₹4,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
+                    <div class="text-3xl font-semibold text-[#00448B] font-heading mb-3">₹4,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
                     <a href="{{ route('contact') }}" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-[4px] bg-primary hover:bg-primary-hover text-white font-heading text-xs font-semibold shadow-sm transition-all">
                         <span>Book 6-in-1 Package</span>
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -148,7 +148,7 @@
                 <div class="p-6 bg-slate-50 border-b border-slate-200/80 text-center">
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-200/80 text-neutral-text uppercase tracking-wider mb-2">Commercial SLA</span>
                     <h3 class="font-heading text-2xl font-medium text-secondary-sub mb-1">Custom Contract</h3>
-                    <div class="text-3xl font-semibold text-[#287ff9] font-heading mb-3">Custom Audit</div>
+                    <div class="text-3xl font-semibold text-[#00448B] font-heading mb-3">Custom Audit</div>
                     <a href="{{ route('contact') }}" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-[4px] bg-primary hover:bg-primary-hover text-white font-heading text-xs font-semibold shadow-sm transition-all">
                         <span>Request Custom Audit</span>
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -207,28 +207,28 @@
                             <th class="p-5 sm:p-6 w-[24%] text-center align-top bg-white border-r border-slate-200/80 sticky top-20 z-30 shadow-xs">
                                 <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-neutral-text uppercase tracking-wider mb-2.5">Essential</span>
                                 <div class="font-heading text-lg sm:text-xl font-medium text-secondary-sub mb-1">4-in-1 Essential</div>
-                                <div class="text-2xl sm:text-3xl font-semibold text-[#287ff9] font-heading mb-1">₹2,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
+                                <div class="text-2xl sm:text-3xl font-semibold text-[#00448B] font-heading mb-1">₹2,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
                             </th>
 
                             <!-- Col 3: 6-in-1 Comprehensive (Sticky with Blue Corner Ribbon) -->
                             <th class="p-5 sm:p-6 w-[24%] text-center align-top bg-white border-r border-slate-200/80 sticky top-20 z-30 shadow-xs relative overflow-hidden">
-                                <!-- Signature Corner Ribbon for Most Popular (Blue #287ff9 Match) -->
+                                <!-- Signature Corner Ribbon for Most Popular (Blue #00448B Match) -->
                                 <div class="absolute top-0 right-0 w-28 h-28 overflow-hidden pointer-events-none z-30">
-                                    <span class="absolute top-4 -right-8 w-32 py-1 bg-[#287ff9] text-white text-[10px] font-bold font-heading tracking-widest uppercase text-center rotate-45 shadow-sm border-y border-white/25">
+                                    <span class="absolute top-4 -right-8 w-32 py-1 bg-[#00448B] text-white text-[10px] font-bold font-heading tracking-widest uppercase text-center rotate-45 shadow-sm border-y border-white/25">
                                         POPULAR
                                     </span>
                                 </div>
 
                                 <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary-sub uppercase tracking-wider mb-2.5">Comprehensive</span>
                                 <div class="font-heading text-lg sm:text-xl font-medium text-secondary-sub mb-1">6-in-1 Comprehensive</div>
-                                <div class="text-2xl sm:text-3xl font-semibold text-[#287ff9] font-heading mb-1">₹4,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
+                                <div class="text-2xl sm:text-3xl font-semibold text-[#00448B] font-heading mb-1">₹4,499<span class="text-xs font-normal text-neutral-text/70 font-body">/mo</span></div>
                             </th>
 
                             <!-- Col 4: Custom Contract (Sticky) -->
                             <th class="p-5 sm:p-6 w-[24%] text-center align-top bg-white sticky top-20 z-30 rounded-tr-2xl shadow-xs">
                                 <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-neutral-text uppercase tracking-wider mb-2.5">Commercial SLA</span>
                                 <div class="font-heading text-lg sm:text-xl font-medium text-secondary-sub mb-1">Custom Contract</div>
-                                <div class="text-2xl sm:text-3xl font-semibold text-[#287ff9] font-heading mb-1">Custom Audit</div>
+                                <div class="text-2xl sm:text-3xl font-semibold text-[#00448B] font-heading mb-1">Custom Audit</div>
                             </th>
 
                         </tr>
@@ -424,7 +424,7 @@
                     <!-- Header: Blue Hexagon Badge + Title Beside -->
                     <div class="flex items-center gap-3.5 pr-6 mb-4">
                         <div class="relative w-13 h-14 shrink-0 flex items-center justify-center">
-                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#287ff9] drop-shadow-sm" fill="currentColor">
+                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#00448B] drop-shadow-sm" fill="currentColor">
                                 <path d="M28 2L53 16V46L28 60L3 46V16L28 2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
                             </svg>
                             <i data-lucide="armchair" class="absolute z-10 w-5 h-5 text-white stroke-[2.2]"></i>
@@ -455,7 +455,7 @@
                     <!-- Header: Blue Hexagon Badge + Title Beside -->
                     <div class="flex items-center gap-3.5 pr-6 mb-4">
                         <div class="relative w-13 h-14 shrink-0 flex items-center justify-center">
-                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#287ff9] drop-shadow-sm" fill="currentColor">
+                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#00448B] drop-shadow-sm" fill="currentColor">
                                 <path d="M28 2L53 16V46L28 60L3 46V16L28 2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
                             </svg>
                             <i data-lucide="flame" class="absolute z-10 w-5 h-5 text-white stroke-[2.2]"></i>
@@ -486,7 +486,7 @@
                     <!-- Header: Blue Hexagon Badge + Title Beside -->
                     <div class="flex items-center gap-3.5 pr-6 mb-4">
                         <div class="relative w-13 h-14 shrink-0 flex items-center justify-center">
-                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#287ff9] drop-shadow-sm" fill="currentColor">
+                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#00448B] drop-shadow-sm" fill="currentColor">
                                 <path d="M28 2L53 16V46L28 60L3 46V16L28 2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
                             </svg>
                             <i data-lucide="shield-check" class="absolute z-10 w-5 h-5 text-white stroke-[2.2]"></i>
@@ -517,7 +517,7 @@
                     <!-- Header: Blue Hexagon Badge + Title Beside -->
                     <div class="flex items-center gap-3.5 pr-6 mb-4">
                         <div class="relative w-13 h-14 shrink-0 flex items-center justify-center">
-                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#287ff9] drop-shadow-sm" fill="currentColor">
+                            <svg viewBox="0 0 56 62" class="w-full h-full text-[#00448B] drop-shadow-sm" fill="currentColor">
                                 <path d="M28 2L53 16V46L28 60L3 46V16L28 2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
                             </svg>
                             <i data-lucide="droplets" class="absolute z-10 w-5 h-5 text-white stroke-[2.2]"></i>

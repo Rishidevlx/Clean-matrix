@@ -60,7 +60,7 @@
                 <div class="relative z-10 flex flex-col items-center">
                     <!-- Clenix Exact Teardrop Icon Container (Cyan Blue -> White on hover with plunge & drop-in animation) -->
                     <div class="service-icon-box relative w-20 h-28 mb-6 overflow-hidden flex items-center justify-center">
-                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#287ff9] group-hover:fill-white">
+                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#00448B] group-hover:fill-white">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M39.502 0C31.6073 22.5089 16.6608 39.8484 5.37571 59.9846C-9.69117 86.9025 8.57537 116 39.5 116C70.4246 116 88.6912 86.9025 73.6243 59.9846C62.3532 39.8484 47.3968 22.5089 39.502 0ZM67.7268 92.3406C65.1794 97.4267 61.3492 101.773 56.6082 104.959C51.8671 108.144 46.3762 110.06 40.6683 110.52C50.3741 106.605 58.3021 99.3068 62.9602 89.9995C67.6184 80.6922 68.6854 70.0175 65.9604 59.9846C69.042 64.7695 70.824 70.2631 71.1335 75.9323C71.443 81.6015 70.2695 87.2537 67.7268 92.3406V92.3406Z"/>
                         </svg>
                         <div class="card-drop-icon absolute inset-0 flex items-center justify-center pt-3 text-white group-hover:text-secondary-sub transition-colors duration-400">
@@ -92,7 +92,7 @@
 
                 <div class="relative z-10 flex flex-col items-center">
                     <div class="service-icon-box relative w-20 h-28 mb-6 overflow-hidden flex items-center justify-center">
-                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#287ff9] group-hover:fill-white">
+                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#00448B] group-hover:fill-white">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M39.502 0C31.6073 22.5089 16.6608 39.8484 5.37571 59.9846C-9.69117 86.9025 8.57537 116 39.5 116C70.4246 116 88.6912 86.9025 73.6243 59.9846C62.3532 39.8484 47.3968 22.5089 39.502 0ZM67.7268 92.3406C65.1794 97.4267 61.3492 101.773 56.6082 104.959C51.8671 108.144 46.3762 110.06 40.6683 110.52C50.3741 106.605 58.3021 99.3068 62.9602 89.9995C67.6184 80.6922 68.6854 70.0175 65.9604 59.9846C69.042 64.7695 70.824 70.2631 71.1335 75.9323C71.443 81.6015 70.2695 87.2537 67.7268 92.3406V92.3406Z"/>
                         </svg>
                         <div class="card-drop-icon absolute inset-0 flex items-center justify-center pt-3 text-white group-hover:text-secondary-sub transition-colors duration-400">
@@ -121,7 +121,7 @@
 
                 <div class="relative z-10 flex flex-col items-center">
                     <div class="service-icon-box relative w-20 h-28 mb-6 overflow-hidden flex items-center justify-center">
-                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#287ff9] group-hover:fill-white">
+                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#00448B] group-hover:fill-white">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M39.502 0C31.6073 22.5089 16.6608 39.8484 5.37571 59.9846C-9.69117 86.9025 8.57537 116 39.5 116C70.4246 116 88.6912 86.9025 73.6243 59.9846C62.3532 39.8484 47.3968 22.5089 39.502 0ZM67.7268 92.3406C65.1794 97.4267 61.3492 101.773 56.6082 104.959C51.8671 108.144 46.3762 110.06 40.6683 110.52C50.3741 106.605 58.3021 99.3068 62.9602 89.9995C67.6184 80.6922 68.6854 70.0175 65.9604 59.9846C69.042 64.7695 70.824 70.2631 71.1335 75.9323C71.443 81.6015 70.2695 87.2537 67.7268 92.3406V92.3406Z"/>
                         </svg>
                         <div class="card-drop-icon absolute inset-0 flex items-center justify-center pt-3 text-white group-hover:text-secondary-sub transition-colors duration-400">
@@ -150,7 +150,7 @@
 
                 <div class="relative z-10 flex flex-col items-center">
                     <div class="service-icon-box relative w-20 h-28 mb-6 overflow-hidden flex items-center justify-center">
-                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#287ff9] group-hover:fill-white">
+                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#00448B] group-hover:fill-white">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M39.502 0C31.6073 22.5089 16.6608 39.8484 5.37571 59.9846C-9.69117 86.9025 8.57537 116 39.5 116C70.4246 116 88.6912 86.9025 73.6243 59.9846C62.3532 39.8484 47.3968 22.5089 39.502 0ZM67.7268 92.3406C65.1794 97.4267 61.3492 101.773 56.6082 104.959C51.8671 108.144 46.3762 110.06 40.6683 110.52C50.3741 106.605 58.3021 99.3068 62.9602 89.9995C67.6184 80.6922 68.6854 70.0175 65.9604 59.9846C69.042 64.7695 70.824 70.2631 71.1335 75.9323C71.443 81.6015 70.2695 87.2537 67.7268 92.3406V92.3406Z"/>
                         </svg>
                         <div class="card-drop-icon absolute inset-0 flex items-center justify-center pt-3 text-white group-hover:text-secondary-sub transition-colors duration-400">
@@ -179,7 +179,7 @@
 
                 <div class="relative z-10 flex flex-col items-center">
                     <div class="service-icon-box relative w-20 h-28 mb-6 overflow-hidden flex items-center justify-center">
-                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#287ff9] group-hover:fill-white">
+                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#00448B] group-hover:fill-white">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M39.502 0C31.6073 22.5089 16.6608 39.8484 5.37571 59.9846C-9.69117 86.9025 8.57537 116 39.5 116C70.4246 116 88.6912 86.9025 73.6243 59.9846C62.3532 39.8484 47.3968 22.5089 39.502 0ZM67.7268 92.3406C65.1794 97.4267 61.3492 101.773 56.6082 104.959C51.8671 108.144 46.3762 110.06 40.6683 110.52C50.3741 106.605 58.3021 99.3068 62.9602 89.9995C67.6184 80.6922 68.6854 70.0175 65.9604 59.9846C69.042 64.7695 70.824 70.2631 71.1335 75.9323C71.443 81.6015 70.2695 87.2537 67.7268 92.3406V92.3406Z"/>
                         </svg>
                         <div class="card-drop-icon absolute inset-0 flex items-center justify-center pt-3 text-white group-hover:text-secondary-sub transition-colors duration-400">
@@ -208,7 +208,7 @@
 
                 <div class="relative z-10 flex flex-col items-center">
                     <div class="service-icon-box relative w-20 h-28 mb-6 overflow-hidden flex items-center justify-center">
-                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#287ff9] group-hover:fill-white">
+                        <svg viewBox="0 0 79 116" class="card-drop-svg w-16 h-24 drop-shadow-sm transition-colors duration-400 fill-[#00448B] group-hover:fill-white">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M39.502 0C31.6073 22.5089 16.6608 39.8484 5.37571 59.9846C-9.69117 86.9025 8.57537 116 39.5 116C70.4246 116 88.6912 86.9025 73.6243 59.9846C62.3532 39.8484 47.3968 22.5089 39.502 0ZM67.7268 92.3406C65.1794 97.4267 61.3492 101.773 56.6082 104.959C51.8671 108.144 46.3762 110.06 40.6683 110.52C50.3741 106.605 58.3021 99.3068 62.9602 89.9995C67.6184 80.6922 68.6854 70.0175 65.9604 59.9846C69.042 64.7695 70.824 70.2631 71.1335 75.9323C71.443 81.6015 70.2695 87.2537 67.7268 92.3406V92.3406Z"/>
                         </svg>
                         <div class="card-drop-icon absolute inset-0 flex items-center justify-center pt-3 text-white group-hover:text-secondary-sub transition-colors duration-400">

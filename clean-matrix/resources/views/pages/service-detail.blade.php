@@ -10,7 +10,7 @@
         width: 140px;
         height: 140px;
         border-radius: 4px;
-        background-color: #287ff9;
+        background-color: #00448B;
         border: 1px solid transparent;
         box-shadow: 0 6px 18px rgba(40, 127, 249, 0.18);
         display: flex;
@@ -38,7 +38,7 @@
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
     }
     .service-process-card-item:hover .service-process-box .service-process-icon {
-        color: #287ff9 !important;
+        color: #00448B !important;
         transform: scale(1.15);
     }
 </style>
@@ -254,8 +254,8 @@
             <div class="hidden md:block absolute top-[68px] left-0 right-0 w-full pointer-events-none z-0">
                 <svg class="w-full h-24 overflow-visible" viewBox="0 0 1200 80" fill="none">
                     <!-- Static Start Point: Blue Ring Circle extended far to the left -->
-                    <circle cx="30" cy="50" r="7" stroke="#287ff9" stroke-width="2.5" fill="#ffffff" />
-                    <circle cx="30" cy="50" r="2.5" fill="#287ff9" />
+                    <circle cx="30" cy="50" r="7" stroke="#00448B" stroke-width="2.5" fill="#ffffff" />
+                    <circle cx="30" cy="50" r="2.5" fill="#00448B" />
 
                     <!-- Gentle Curved Wavy Dashed Path across entire width -->
                     <path d="M 45,50 C 180,18 300,38 430,46 C 580,56 700,28 850,42 C 980,56 1070,26 1145,15" 
@@ -266,8 +266,8 @@
 
                     <!-- Paper Airplane sitting straight at the exact tip of the dashed line -->
                     <g transform="translate(1142, -2) rotate(-10)">
-                        <path d="m22 2-7 20-4-9-9-4Z" stroke="#287ff9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <path d="M22 2 11 13" stroke="#287ff9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="m22 2-7 20-4-9-9-4Z" stroke="#00448B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M22 2 11 13" stroke="#00448B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     </g>
                 </svg>
             </div>
@@ -282,7 +282,7 @@
                             <i data-lucide="{{ $service['steps'][0]['icon'] ?? 'calendar-check' }}" class="w-12 h-12 stroke-[1.8]"></i>
                         </div>
                     </div>
-                    <h3 class="font-heading text-xl sm:text-2xl font-medium text-secondary group-hover:text-[#287ff9] transition-colors duration-200 mb-3 tracking-tight">
+                    <h3 class="font-heading text-xl sm:text-2xl font-medium text-secondary group-hover:text-[#00448B] transition-colors duration-200 mb-3 tracking-tight">
                         {{ $service['steps'][0]['title'] ?? 'Book Online Form' }}
                     </h3>
                     <p class="font-body text-sm text-neutral-text font-light leading-relaxed max-w-xs mx-auto">
@@ -297,7 +297,7 @@
                             <i data-lucide="{{ $service['steps'][1]['icon'] ?? 'mail' }}" class="w-12 h-12 stroke-[1.8]"></i>
                         </div>
                     </div>
-                    <h3 class="font-heading text-xl sm:text-2xl font-medium text-secondary group-hover:text-[#287ff9] transition-colors duration-200 mb-3 tracking-tight">
+                    <h3 class="font-heading text-xl sm:text-2xl font-medium text-secondary group-hover:text-[#00448B] transition-colors duration-200 mb-3 tracking-tight">
                         {{ $service['steps'][1]['title'] ?? 'Get Confirmation' }}
                     </h3>
                     <p class="font-body text-sm text-neutral-text font-light leading-relaxed max-w-xs mx-auto">
@@ -312,7 +312,7 @@
                             <i data-lucide="{{ $service['steps'][2]['icon'] ?? 'smile' }}" class="w-12 h-12 stroke-[1.8]"></i>
                         </div>
                     </div>
-                    <h3 class="font-heading text-xl sm:text-2xl font-medium text-secondary group-hover:text-[#287ff9] transition-colors duration-200 mb-3 tracking-tight">
+                    <h3 class="font-heading text-xl sm:text-2xl font-medium text-secondary group-hover:text-[#00448B] transition-colors duration-200 mb-3 tracking-tight">
                         {{ $service['steps'][2]['title'] ?? "Let's Enjoy" }}
                     </h3>
                     <p class="font-body text-sm text-neutral-text font-light leading-relaxed max-w-xs mx-auto">

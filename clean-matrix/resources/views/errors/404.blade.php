@@ -42,10 +42,10 @@
                 The page you are looking is not available or has been removed. Try going to Home Page by using the button below.
             </p>
 
-            <!-- Clenix Action Button (#287ff9 with hover effect) -->
+            <!-- Clenix Action Button (#00448B with hover effect) -->
             <a 
                 href="{{ route('home') }}" 
-                class="inline-flex items-center justify-center bg-[#287ff9] hover:bg-[#1f6ee0] active:scale-95 text-white font-heading text-xs sm:text-sm font-bold tracking-wider uppercase px-7 sm:px-9 py-2.5 sm:py-3 rounded-[4px] shadow-lg shadow-blue-900/30 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
+                class="inline-flex items-center justify-center bg-[#00448B] hover:bg-[#00366f] active:scale-95 text-white font-heading text-xs sm:text-sm font-bold tracking-wider uppercase px-7 sm:px-9 py-2.5 sm:py-3 rounded-[4px] shadow-lg shadow-blue-900/30 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
             >
                 GO HOME PAGE
             </a>

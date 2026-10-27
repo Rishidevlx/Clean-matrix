@@ -15,7 +15,7 @@
     .clenix-pricing-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 20px 40px -12px rgba(0, 68, 139, 0.12);
-        border-color: #287ff9 !important;
+        border-color: #00448B !important;
     }
     .clenix-pricing-card:hover .pricing-icon {
         transform: scale(1.14) translateY(-2px);
@@ -71,11 +71,11 @@
                         <!-- 100% Solid Airtight Vector Corner Ribbon (Zero-gap 3D folds) -->
                         <svg class="absolute -top-[5px] -left-[5px] w-[130px] h-[130px] z-20 pointer-events-none drop-shadow-sm" viewBox="0 0 130 130" fill="none">
                             <!-- Top 3D Fold (Dark Navy behind card border) -->
-                            <polygon points="121,5 126,0 121,0" fill="#1451ad" />
+                            <polygon points="121,5 126,0 121,0" fill="#002752" />
                             <!-- Left 3D Fold (Dark Navy behind card border) -->
-                            <polygon points="5,121 0,126 0,121" fill="#1451ad" />
+                            <polygon points="5,121 0,126 0,121" fill="#002752" />
                             <!-- Main Diagonal Blue Ribbon (Sash) -->
-                            <polygon points="0,95 95,0 126,0 0,126" fill="#287ff9" />
+                            <polygon points="0,95 95,0 126,0 0,126" fill="#00448B" />
                             <!-- Crisp White Ribbon Text -->
                             <text x="55" y="59" transform="rotate(-45 55 55)" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" letter-spacing="0.5">Popular Sale!</text>
                         </svg>
@@ -84,7 +84,7 @@
                     <div>
                         <!-- Lucide Icon -->
                         <div class="mb-5 flex items-center justify-center">
-                            <div class="pricing-icon text-[#287ff9] transition-transform duration-300">
+                            <div class="pricing-icon text-[#00448B] transition-transform duration-300">
                                 <i data-lucide="{{ $tier['icon'] ?? 'sparkles' }}" class="w-12 h-12 stroke-[1.8]"></i>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             <ul class="space-y-3.5 text-neutral-text text-[15px] font-body font-light text-left w-max mx-auto">
                                 @foreach($tier['features'] as $feature)
                                     <li class="flex items-center gap-3">
-                                        <i data-lucide="check" class="w-4 h-4 text-[#287ff9] stroke-[2.2] shrink-0"></i>
+                                        <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
                                         <span class="text-slate-700">{{ $feature }}</span>
                                     </li>
                                 @endforeach
@@ -110,7 +110,7 @@
                     <div>
                         <!-- Price Box -->
                         <div class="mb-7">
-                            <div class="font-heading text-4xl sm:text-5xl font-semibold text-[#287ff9] leading-tight mb-1">
+                            <div class="font-heading text-4xl sm:text-5xl font-semibold text-[#00448B] leading-tight mb-1">
                                 {{ $tier['price'] }}
                             </div>
                             <div class="text-[13px] text-neutral-text/75 font-body font-light tracking-wide">
@@ -121,7 +121,7 @@
                         <!-- Action Button -->
                         <div class="flex justify-center">
                             <a href="{{ route('contact') }}" 
-                               class="inline-flex items-center justify-center gap-2 bg-[#287ff9] hover:bg-[#1b6de5] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 w-full group/btn">
+                               class="inline-flex items-center justify-center gap-2 bg-[#00448B] hover:bg-[#00366f] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 w-full group/btn">
                                 <span>{{ $tier['btn_text'] ?? 'Choose Plan' }}</span>
                                 <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover/btn:translate-x-1"></i>
                             </a>
