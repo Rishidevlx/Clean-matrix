@@ -408,7 +408,7 @@
 
         const formData = new FormData(form);
 
-        fetch("{{ route('contact.submit') }}", {
+        fetch("{{ route('contact.submit', [], false) }}", {
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
