@@ -50,7 +50,7 @@
                 <div>
                     <!-- Original Lucide Icon: spray-can -->
                     <div class="mb-5 flex items-center justify-center">
-                        <div class="pricing-icon text-[#00448B] transition-transform duration-300">
+                        <div class="pricing-icon text-[#81BA41] transition-transform duration-300">
                             <i data-lucide="spray-can" class="w-12 h-12 stroke-[1.8]"></i>
                         </div>
                     </div>
@@ -64,23 +64,23 @@
                     <div class="flex justify-center mb-9">
                         <ul class="space-y-3.5 text-neutral-text text-[15px] font-body font-light text-left w-max mx-auto">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">2 Bedrooms Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">Vacuuming & Scrubbing</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">2 Bathroom Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">Window & Glass Wash</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">1 Livingroom Cleaning</span>
                             </li>
                         </ul>
@@ -100,7 +100,7 @@
 
                     <!-- Action Button -->
                     <div class="flex justify-center">
-                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#00448B] hover:bg-[#00366f] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#00366f] w-48 sm:w-52">
+                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#81BA41] hover:bg-[#00448B] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#81BA41] group-hover:hover:bg-[#00448B] w-48 sm:w-52">
                             <span>Book Now</span>
                             <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"></i>
                         </a>
@@ -116,12 +116,12 @@
                 
                 <!-- 100% Solid Airtight Vector Corner Ribbon (Zero-gap 3D folds) -->
                 <svg class="absolute -top-[5px] -left-[5px] w-[130px] h-[130px] z-20 pointer-events-none drop-shadow-sm" viewBox="0 0 130 130" fill="none">
-                    <!-- Top 3D Fold (Dark Navy behind card border) -->
-                    <polygon points="121,5 126,0 121,0" fill="#002752" />
-                    <!-- Left 3D Fold (Dark Navy behind card border) -->
-                    <polygon points="5,121 0,126 0,121" fill="#002752" />
-                    <!-- Main Diagonal Blue Ribbon (Sash) -->
-                    <polygon points="0,95 95,0 126,0 0,126" fill="#00448B" />
+                    <!-- Top 3D Fold (Dark Green behind card border) -->
+                    <polygon points="121,5 126,0 121,0" fill="#265c2b" />
+                    <!-- Left 3D Fold (Dark Green behind card border) -->
+                    <polygon points="5,121 0,126 0,121" fill="#265c2b" />
+                    <!-- Main Diagonal Green Ribbon (Sash) -->
+                    <polygon points="0,95 95,0 126,0 0,126" fill="#81BA41" />
                     <!-- Crisp White Ribbon Text -->
                     <text x="55" y="59" transform="rotate(-45 55 55)" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" letter-spacing="0.5">Popular Sale!</text>
                 </svg>
@@ -129,7 +129,7 @@
                 <div>
                     <!-- Original Lucide Icon: sparkles -->
                     <div class="mb-5 flex items-center justify-center">
-                        <div class="pricing-icon text-[#00448B] transition-transform duration-300">
+                        <div class="pricing-icon text-[#81BA41] transition-transform duration-300">
                             <i data-lucide="sparkles" class="w-12 h-12 stroke-[1.8]"></i>
                         </div>
                     </div>
@@ -143,23 +143,23 @@
                     <div class="flex justify-center mb-9">
                         <ul class="space-y-3.5 text-neutral-text text-[15px] font-body font-light text-left w-max mx-auto">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">3 Bedrooms Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">Vacuuming & Scrubbing</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">2 Bathroom Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">Window & Glass Wash</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">1 Livingroom Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3 text-primary font-medium">
@@ -183,7 +183,7 @@
 
                     <!-- Action Button -->
                     <div class="flex justify-center">
-                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#00448B] hover:bg-[#00366f] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#00366f] w-48 sm:w-52">
+                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#81BA41] hover:bg-[#00448B] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#81BA41] group-hover:hover:bg-[#00448B] w-48 sm:w-52">
                             <span>Book Now</span>
                             <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"></i>
                         </a>
@@ -200,7 +200,7 @@
                 <div>
                     <!-- Original Lucide Icon: package-check -->
                     <div class="mb-5 flex items-center justify-center">
-                        <div class="pricing-icon text-[#00448B] transition-transform duration-300">
+                        <div class="pricing-icon text-[#81BA41] transition-transform duration-300">
                             <i data-lucide="package-check" class="w-12 h-12 stroke-[1.8]"></i>
                         </div>
                     </div>
@@ -214,23 +214,23 @@
                     <div class="flex justify-center mb-9">
                         <ul class="space-y-3.5 text-neutral-text text-[15px] font-body font-light text-left w-max mx-auto">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">4 Bedrooms Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">Vacuuming & Scrubbing</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">2 Bathroom Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">Window & Glass Wash</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-4 h-4 text-[#00448B] stroke-[2.2] shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#81BA41] stroke-[2.2] shrink-0"></i>
                                 <span class="whitespace-nowrap">1 Livingroom Cleaning</span>
                             </li>
                             <li class="flex items-center gap-3 text-primary font-medium">
@@ -254,7 +254,7 @@
 
                     <!-- Action Button -->
                     <div class="flex justify-center">
-                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#00448B] hover:bg-[#00366f] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#00366f] w-48 sm:w-52">
+                        <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-[#81BA41] hover:bg-[#00448B] text-white text-sm font-medium py-3.5 px-8 rounded-[4px] shadow-sm hover:shadow-md transition-all duration-200 group-hover:bg-[#81BA41] group-hover:hover:bg-[#00448B] w-48 sm:w-52">
                             <span>Book Now</span>
                             <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"></i>
                         </a>

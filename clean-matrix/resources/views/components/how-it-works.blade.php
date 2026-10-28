@@ -8,9 +8,9 @@
         width: 140px;
         height: 140px;
         border-radius: 4px;
-        background-color: #00448B;
+        background-color: #81BA41;
         border: 1px solid transparent;
-        box-shadow: 0 6px 18px rgba(40, 127, 249, 0.18);
+        box-shadow: 0 6px 18px rgba(129, 186, 65, 0.25);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,15 +31,15 @@
         transition: all 0.75s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-    /* On Hover: Smoothly straightens to center (0deg), lifts, turns WHITE, icon turns BLUE */
+    /* On Hover: Smoothly straightens to center (0deg), lifts, turns BLUE, icon remains WHITE */
     .process-card-item:hover .process-box {
         transform: rotate(0deg) translateY(-8px);
-        background-color: #ffffff !important;
-        border-color: #e2e8f0 !important;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+        background-color: #00448B !important;
+        border-color: #00448B !important;
+        box-shadow: 0 12px 28px rgba(0, 68, 139, 0.22) !important;
     }
     .process-card-item:hover .process-box .process-icon {
-        color: #00448B !important;
+        color: #ffffff !important;
         transform: scale(1.15);
     }
 </style>
@@ -69,9 +69,9 @@
             <!-- Background Connecting Dashed Wavy Line & Paper Airplane (Straight on the Line) -->
             <div class="hidden md:block absolute top-[68px] left-0 right-0 w-full pointer-events-none z-0">
                 <svg class="w-full h-24 overflow-visible" viewBox="0 0 1200 80" fill="none">
-                    <!-- Static Start Point: Blue Ring Circle extended far to the left -->
-                    <circle cx="30" cy="50" r="7" stroke="#00448B" stroke-width="2.5" fill="#ffffff" />
-                    <circle cx="30" cy="50" r="2.5" fill="#00448B" />
+                    <!-- Static Start Point: Theme Green Ring Circle extended far to the left -->
+                    <circle cx="30" cy="50" r="7" stroke="#81BA41" stroke-width="2.5" fill="#ffffff" />
+                    <circle cx="30" cy="50" r="2.5" fill="#81BA41" />
 
                     <!-- Gentle Curved Wavy Dashed Path across entire width -->
                     <path d="M 45,50 C 180,18 300,38 430,46 C 580,56 700,28 850,42 C 980,56 1070,26 1145,15" 
@@ -82,8 +82,8 @@
 
                     <!-- Paper Airplane sitting straight at the exact tip of the dashed line -->
                     <g transform="translate(1142, -2) rotate(-10)">
-                        <path d="m22 2-7 20-4-9-9-4Z" stroke="#00448B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <path d="M22 2 11 13" stroke="#00448B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="m22 2-7 20-4-9-9-4Z" stroke="#81BA41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M22 2 11 13" stroke="#81BA41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     </g>
                 </svg>
             </div>
